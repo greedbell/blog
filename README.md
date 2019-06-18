@@ -147,7 +147,7 @@
     * [web proxy](/technology/web_proxy.md)
     * [符点精度问题](/technology/float.md)
 * [运维](/dev-ops)
-    * [# Centos 自启动](/dev-ops/auto-launch.md)
+    * [Centos 自启动](/dev-ops/auto-launch.md)
     * [Docker For Mac](/dev-ops/docker-mac.md)
     * [查看主机信息](/dev-ops/host-info.md)
     * [网络相关命令](/dev-ops/network.md)

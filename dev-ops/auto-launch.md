@@ -1,4 +1,4 @@
-# Centos 自启动
+# Centos 自启动
 
 ## 方法一
 
@@ -12,6 +12,6 @@
 
 `chkconfig`
 
-## Reference
+## References
 
 * [CentOS 程序开机自启动方法总结 ](http://blog.csdn.net/nightelve/article/details/17386345)
