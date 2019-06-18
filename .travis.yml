@@ -1,0 +1,6 @@
+before_install:
+- "./scripts/dependences.sh"
+script:
+- "travis_wait 120 sh ./scripts/build.sh"
+after_success:
+- "./scripts/deploy.sh"

@@ -1,0 +1,3 @@
+# Gif
+
+android默认是不支持gif动画的，webview实际上是使用了webkit的功能来显示gif动画，虽然不能显示gif，但是不影响上传文件，你不要decode成bitmap来上传数据，直接用FileInputStream转成数组来上传，绝对没有问题的

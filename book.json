@@ -1,0 +1,50 @@
+{
+    "gitbook": "3.x.x" ,
+    "title": "Bell's blog",
+    "author" : "Bell",
+    "generator": "site",
+    "language" : "zh-hans",
+    "plugins": [
+        "sharing",
+        "github",
+        "-lunr",
+        "-search",
+        "search-pro",
+        "splitter",
+        "anchors",
+        "anchor-navigation-ex",
+        "disqus",
+        "adsense"
+        ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/greedbell/blog"
+        },
+        "search-pro": {
+            "cutWordLib": "nodejieba",
+            "defineWord" : ["搜索"]
+        },
+        "sharing": {
+            "facebook": false,
+            "twitter": false,
+            "google": false,
+            "weibo": false,
+            "instapaper": false,
+            "vk": false,
+            "all": [
+                "facebook", "google", "twitter",
+                "weibo", "instapaper"
+            ]
+        },
+        "disqus": {
+            "shortName": "bell-blog-1"
+        },
+        "adsense": {
+        "client": "ca-pub-1710914462898396",
+        "slot": "1710914462898396",
+        "format": "auto",
+        "element": ".page-inner section",
+        "position": "top"
+      }
+    }
+}

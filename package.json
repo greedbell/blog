@@ -1,0 +1,32 @@
+{
+  "name": "bell-blog",
+  "version": "1.0.0",
+  "description": "Bell's Blog",
+  "scripts": {
+    "build": "gitbook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greedbell/blog.git"
+  },
+  "keywords": [
+    "bell",
+    "blog"
+  ],
+  "author": "Bell <bell@greedlab.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/greedbell/blog/issues"
+  },
+  "homepage": "https://github.com/greedbell/blog#readme",
+  "dependencies": {
+    "gitbook-plugin-adsense": "^1.0.3",
+    "gitbook-plugin-anchors": "^0.7.1",
+    "gitbook-plugin-duoshuo": "^1.6.3",
+    "gitbook-plugin-fontsettings": "^2.0.0",
+    "gitbook-plugin-github": "^2.0.0",
+    "gitbook-plugin-highlight": "^2.0.2",
+    "gitbook-plugin-search-pro": "^1.1.0",
+    "gitbook-plugin-sharing": "^1.0.2"
+  }
+}

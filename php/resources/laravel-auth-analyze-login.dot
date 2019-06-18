@@ -1,0 +1,13 @@
+digraph {
+  label="laravel 登录流程";
+  begin[label="开始"];
+  validateLogin[label="验证请求数据格式\n"];
+  attemptLogin[label="验证用户名密码是否正确"];
+  success[label="登录成功"];
+  fail[label="登录失败"];
+  begin->validateLogin;
+  validateLogin->attemptLogin[label="请求数据格式正确"]
+  validateLogin->fail[label="请求数据格式错误",style=dashed]
+  attemptLogin->success[label="用户名密码正确"]
+  attemptLogin->fail[label="用户名或密码错误",style=dashed]
+}
