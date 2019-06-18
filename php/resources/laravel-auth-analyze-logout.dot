@@ -1,0 +1,15 @@
+digraph {
+  label="laravel 注销流程";
+  begin[label="开始"];
+  validator[label="验证请求数据格式"];
+  login[label="登录"];
+  registered[label="是否已经注册过"];
+  success[label="注册成功"];
+  fail[label="注册失败"];
+  begin->validator;
+  validator->login[label="请求数据格式正确"]
+  validator->fail[label="请求数据格式错误",style=dashed]
+  login->registered
+  registered->success[label="未注册"]
+  registered->fail[label="已注册",style=dashed]
+}

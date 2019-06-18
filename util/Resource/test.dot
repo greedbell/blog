@@ -1,0 +1,21 @@
+digraph structs {
+  label="code struct";
+  rankdir=LR;
+  subgraph cluster0 {
+    node [style=filled,color=white];
+    style=filled;
+    color=lightgrey;
+    label = "商品";
+  }
+  subgraph cluster1 {
+    node [style=filled,color=white];
+    style=filled;
+    color=lightgrey;
+    label="活动";
+    play_a -> play_b;
+  }
+
+  main [label="主入口"];
+  main -> goods_a;
+  main -> play_a;
+}
