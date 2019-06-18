@@ -1,7 +1,7 @@
 #!/bin/bash
 #Auth: bell@greedlab.com
 #
-# deploy
+# 静态资源发布到 docs 目录
 #
 
 # 当前目录
