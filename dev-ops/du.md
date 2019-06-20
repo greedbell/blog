@@ -3,6 +3,7 @@
 按大小逆序排列
 
 ```sh
+# mac 用 du -hs * | sort -hr
 $ du -hs * | gsort -hr
  36G	Developer
  29G	Android
