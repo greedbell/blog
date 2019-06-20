@@ -10,6 +10,10 @@ Microsoft Office 是对 Office Open XML 的扩展
 * [Office VBA Reference](https://docs.microsoft.com/en-us/office/vba/api/overview/)
 * [Office VBA 参考](https://docs.microsoft.com/zh-cn/office/vba/api/overview/)
 
+## OFfice 加载项（add-ins)
+
+* [Office 加载项文档](https://docs.microsoft.com/zh-cn/office/dev/add-ins/)
+
 ## References
 
 * [Office File Formats](https://docs.microsoft.com/en-us/openspecs/office_file_formats/ms-offfflp/8aea05e3-8c1e-4a9a-9614-31f71e679456) Office 文件格式

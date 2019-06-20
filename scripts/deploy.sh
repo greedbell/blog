@@ -13,7 +13,9 @@ SCRIPT_DIR=$(cd "$(dirname "$0")"; pwd)
 ## blog 目录
 BLOG_DIRECTORY=${SCRIPT_DIR}/..
 
-GITHUB_REF=github.com/GreedBell/blog.git
+if [[ -z ${GITHUB_REF} ]]; then
+  GITHUB_REF=github.com/GreedBell/blog.git
+fi
 
 if ! [ -n "${GITHUB_API_KEY}" ]; then
   echo "no valid GITHUB_API_KEY"
