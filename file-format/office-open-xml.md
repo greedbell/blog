@@ -35,15 +35,6 @@ java 版本处理 OOXML
 * [POI各Jar包的作用](https://blog.csdn.net/szwangdf/article/details/39053859)
 * [Apache POI](https://poi.apache.org/)
 
-
-## VBA
-
-在 Office 中运行的 VB 脚本
-
-* [Office VBA Reference](https://docs.microsoft.com/en-us/office/vba/api/overview/)
-* [Office VBA 参考](https://docs.microsoft.com/zh-cn/office/vba/api/overview/)
-
-
 ## References
 
 * [OOXML 规范](http://officeopenxml.com/)
