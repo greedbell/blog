@@ -42,4 +42,5 @@
 
 ## References
 
+* [3.5.3 Shell Parameter Expansion](http://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Shell-Parameter-Expansion)
 * <http://blog.csdn.net/shmilyringpull/article/details/7631106>
