@@ -10,7 +10,7 @@
 * PoolingHttpClientConnectionManager BIO
 * PoolingNHttpClientConnectionManager NIO
 
-第个 host 建立连接后 keep alive，之后所有该 host 的请求使用同一个连接
+每个 host 建立连接后 keep alive，之后所有该 host 的请求使用同一个连接
 
 ## 多线程
 
@@ -43,3 +43,7 @@ model.
 #### References
 
 * <https://github.com/mfornos/glaze-http/blob/master/glaze-core/src/main/java/glaze/client/async/DefaultAsyncClient.java#L283>
+
+## References
+
+* [HttpClient 中的三个超时详解](https://blog.csdn.net/zhongzh86/article/details/46348933)
