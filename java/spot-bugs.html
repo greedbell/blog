@@ -7115,13 +7115,51 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#spotbugs"><b>1. </b>spotbugs</a></li><ul><li><span class="title-icon "></span><a href="#references"><b>1.1. </b>References</a></li></ul></ul></div><a href="#spotbugs" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="spotbugs"><a name="spotbugs" class="anchor-navigation-ex-anchor" href="#spotbugs"><i class="fa fa-link" aria-hidden="true"></i></a>1. spotbugs</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#spotbugs"><b>1. </b>spotbugs</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;"><b>1.1. </b>&#x5B89;&#x88C5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;"><b>1.1.1. </b>&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;-idea-&#x63D2;&#x4EF6;"><b>1.1.2. </b>&#x5B89;&#x88C5; IDEA &#x63D2;&#x4EF6;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;"><b>1.2. </b>&#x4F7F;&#x7528;</a></li><ul><li><span class="title-icon "></span><a href="#&#x751F;&#x6210;&#x62A5;&#x544A;"><b>1.2.1. </b>&#x751F;&#x6210;&#x62A5;&#x544A;</a></li></ul><li><span class="title-icon "></span><a href="#references"><b>1.3. </b>References</a></li></ul></ul></div><a href="#spotbugs" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="spotbugs"><a name="spotbugs" class="anchor-navigation-ex-anchor" href="#spotbugs"><i class="fa fa-link" aria-hidden="true"></i></a>1. spotbugs</h1>
 <p>&#x53C2;&#x8003; <a href="https://docs.gradle.org/current/userguide/findbugs_plugin.html" target="_blank">The FindBugs Plugin</a>&#xFF0C;FindBugs &#x5C06;&#x4E0D;&#x652F;&#x6301; java9&#x3001;Gradle 6.0&#xFF0C;&#x4F7F;&#x7528; SpotBugs &#x66FF;&#x4EE3;</p>
-<h2 id="references"><a name="references" class="anchor-navigation-ex-anchor" href="#references"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. References</h2>
+<h2 id="&#x5B89;&#x88C5;"><a name="&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x5B89;&#x88C5;</h2>
+<p>&#x53C2;&#x8003; <a href="https://plugins.gradle.org/plugin/com.github.spotbugs" target="_blank">official Gradle Plugin page</a> &#x63D2;&#x5165;</p>
+<pre><code class="lang-groovy">plugins {
+  id <span class="hljs-string">&quot;com.github.spotbugs&quot;</span> version <span class="hljs-string">&quot;1.6.9&quot;</span>
+}
+</code></pre>
+<p>&#x5230; <code>build.gradle</code></p>
+<p>[&#x6CE8;&#x610F;] &#x6587;&#x7AE0;&#x7F16;&#x8F91;&#x65E5;&#x53EA;&#x6709; 1.6.9 &#x7248;&#x672C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#xFF0C;&#x66F4;&#x9AD8;&#x7248;&#x672C;&#x4F1A;&#x62A5; <code>Could not create an instance of type com.github.spotbugs.internal.spotbugs.SpotBugsExecutor.</code> &#x9519;&#x8BEF;</p>
+<h3 id="&#x914D;&#x7F6E;"><a name="&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. &#x914D;&#x7F6E;</h3>
+<p>&#x53C2;&#x8003; <a href="https://spotbugs.readthedocs.io/en/stable/gradle.html#configure-gradle-plugin" target="_blank">configure-gradle-plugin</a></p>
+<pre><code class="lang-groovy">spotbugs {
+    toolVersion = <span class="hljs-string">&quot;3.1.12&quot;</span>
+    sourceSets = [sourceSets.main]
+    ignoreFailures = <span class="hljs-literal">true</span>
+    reportsDir = file(<span class="hljs-string">&quot;$project.buildDir/spotbugsReports&quot;</span>)
+    effort = <span class="hljs-string">&quot;max&quot;</span>
+    reportLevel = <span class="hljs-string">&quot;high&quot;</span>
+    visitors = [<span class="hljs-string">&quot;FindSqlInjection&quot;</span>, <span class="hljs-string">&quot;SwitchFallthrough&quot;</span>]
+    omitVisitors = [<span class="hljs-string">&quot;FindNonShortCircuit&quot;</span>]
+    includeFilter = file(<span class="hljs-string">&quot;$rootProject.projectDir/config/spotbugs/includeFilter.xml&quot;</span>)
+    excludeFilter = file(<span class="hljs-string">&quot;$rootProject.projectDir/config/spotbugs/excludeFilter.xml&quot;</span>)
+}
+</code></pre>
+<p>&#x8FDB;&#x884C;&#x914D;&#x7F6E;</p>
+<h3 id="&#x5B89;&#x88C5;-idea-&#x63D2;&#x4EF6;"><a name="&#x5B89;&#x88C5;-idea-&#x63D2;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;-idea-&#x63D2;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. &#x5B89;&#x88C5; IDEA &#x63D2;&#x4EF6;</h3>
+<pre><code>IntelliJ IDEA &gt; Preferences &gt; Plugins &gt; Marketplace &gt; &#x641C;&#x7D22; FindBugs-IDEA &gt; Install
+</code></pre><p><code>FindBugs-IDEA</code> &#x63D2;&#x4EF6;&#x652F;&#x6301; SpotBugs</p>
+<h2 id="&#x4F7F;&#x7528;"><a name="&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x4F7F;&#x7528;</h2>
+<h3 id="&#x751F;&#x6210;&#x62A5;&#x544A;"><a name="&#x751F;&#x6210;&#x62A5;&#x544A;" class="anchor-navigation-ex-anchor" href="#&#x751F;&#x6210;&#x62A5;&#x544A;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. &#x751F;&#x6210;&#x62A5;&#x544A;</h3>
+<p>&#x53EA;&#x68C0;&#x67E5; spotbugs</p>
+<pre><code class="lang-bash">$ ./gradlew spotbugsMain
+</code></pre>
+<p>&#x68C0;&#x67E5;&#x6240;&#x6709;&#x7684;</p>
+<pre><code class="lang-bash">$ ./gradlew check
+</code></pre>
+<p>&#x62A5;&#x544A;&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#xFF1A; <code>build/spotbugsReports/main.xml</code></p>
+<h4 id="idea-&#x67E5;&#x770B;&#x62A5;&#x544A;"><a name="idea-&#x67E5;&#x770B;&#x62A5;&#x544A;" class="anchor-navigation-ex-anchor" href="#idea-&#x67E5;&#x770B;&#x62A5;&#x544A;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="idea-&#x67E5;&#x770B;&#x62A5;&#x544A;" class="plugin-anchor" href="#idea-&#x67E5;&#x770B;&#x62A5;&#x544A;"><i class="fa fa-link" aria-hidden="true"></i></a>IDEA &#x67E5;&#x770B;&#x62A5;&#x544A;</h4>
+<pre><code>IDEA &#x5DE6;&#x4E0B;&#x89D2; FindBugs-IDEA &gt; &#x5BFC;&#x5165;&#x6309;&#x94AE;&#xFF08;Import previous saved Bug Collection &gt; &#x9009;&#x62E9;&#x521A;&#x521A;&#x751F;&#x6210;&#x7684;&#x62A5;&#x544A;&#x6587;&#x4EF6;
+</code></pre><h2 id="references"><a name="references" class="anchor-navigation-ex-anchor" href="#references"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. References</h2>
 <ul>
 <li><a href="https://github.com/spotbugs/spotbugs" target="_blank">GitHub</a></li>
 <li><a href="https://spotbugs.readthedocs.io/en/stable/" target="_blank">&#x5B98;&#x65B9;&#x6587;&#x6863;</a></li>
-<li><a href="https://plugins.gradle.org/plugin/com.github.spotbugs" target="_blank">official Gradle Plugin page.</a></li>
+<li><a href="https://plugins.gradle.org/plugin/com.github.spotbugs" target="_blank">official Gradle Plugin page</a></li>
 </ul>
 
                                 
@@ -7166,7 +7204,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"spotbugs","level":"1.20.10","depth":2,"next":{"title":"高精度计算","level":"1.20.11","depth":2,"path":"java/high-precision-calculation.md","ref":"java/high-precision-calculation.md","articles":[]},"previous":{"title":"Disruptor","level":"1.20.9","depth":2,"path":"java/disruptor.md","ref":"java/disruptor.md","articles":[]},"dir":"ltr"},"config":{"plugins":["sharing","github","-lunr","-search","search-pro","splitter","anchors","anchor-navigation-ex","disqus","adsense"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"bell-blog-1"},"github":{"url":"https://github.com/greedbell/blog"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["搜索"]},"adsense":{"client":"ca-pub-1710914462898396","slot":"1710914462898396","format":"auto","element":".page-inner section","position":"top"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Bell","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bell's blog","language":"zh-hans","gitbook":"3.x.x"},"file":{"path":"java/spot-bugs.md","mtime":"2019-07-05T03:46:43.866Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-05T03:47:40.978Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"spotbugs","level":"1.20.10","depth":2,"next":{"title":"高精度计算","level":"1.20.11","depth":2,"path":"java/high-precision-calculation.md","ref":"java/high-precision-calculation.md","articles":[]},"previous":{"title":"Disruptor","level":"1.20.9","depth":2,"path":"java/disruptor.md","ref":"java/disruptor.md","articles":[]},"dir":"ltr"},"config":{"plugins":["sharing","github","-lunr","-search","search-pro","splitter","anchors","anchor-navigation-ex","disqus","adsense"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"bell-blog-1"},"github":{"url":"https://github.com/greedbell/blog"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["搜索"]},"adsense":{"client":"ca-pub-1710914462898396","slot":"1710914462898396","format":"auto","element":".page-inner section","position":"top"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Bell","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bell's blog","language":"zh-hans","gitbook":"3.x.x"},"file":{"path":"java/spot-bugs.md","mtime":"2019-07-05T12:29:10.416Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-05T12:30:06.167Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
