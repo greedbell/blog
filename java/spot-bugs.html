@@ -3036,7 +3036,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.20.16" data-path="coroutine.html">
+        <li class="chapter " data-level="1.20.16" data-path="pmd.html">
+            
+                <a href="pmd.html">
+            
+                    
+                    PMD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.17" data-path="coroutine.html">
             
                 <a href="coroutine.html">
             
@@ -3049,7 +3062,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.20.17" data-path="reflection.html">
+        <li class="chapter " data-level="1.20.18" data-path="reflection.html">
             
                 <a href="reflection.html">
             
@@ -3062,7 +3075,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.20.18" data-path="quasar.html">
+        <li class="chapter " data-level="1.20.19" data-path="quasar.html">
             
                 <a href="quasar.html">
             
@@ -3075,7 +3088,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.20.19" data-path="find-bugs.html">
+        <li class="chapter " data-level="1.20.20" data-path="find-bugs.html">
             
                 <a href="find-bugs.html">
             
@@ -3088,7 +3101,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.20.20" data-path="visual-vm.html">
+        <li class="chapter " data-level="1.20.21" data-path="visual-vm.html">
             
                 <a href="visual-vm.html">
             
@@ -3101,7 +3114,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.20.21" data-path="assert-exception.html">
+        <li class="chapter " data-level="1.20.22" data-path="assert-exception.html">
             
                 <a href="assert-exception.html">
             
@@ -7141,12 +7154,16 @@
 }
 </code></pre>
 <p>&#x8FDB;&#x884C;&#x914D;&#x7F6E;</p>
+<h4 id="filter"><a name="filter" class="anchor-navigation-ex-anchor" href="#filter"><i class="fa fa-link" aria-hidden="true"></i></a><a name="filter" class="plugin-anchor" href="#filter"><i class="fa fa-link" aria-hidden="true"></i></a>Filter</h4>
+<ul>
+<li><a href="http://findbugs.sourceforge.net/manual/filter.html" target="_blank">Chapter 8. Filter Files</a></li>
+</ul>
 <h3 id="&#x5B89;&#x88C5;-idea-&#x63D2;&#x4EF6;"><a name="&#x5B89;&#x88C5;-idea-&#x63D2;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;-idea-&#x63D2;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. &#x5B89;&#x88C5; IDEA &#x63D2;&#x4EF6;</h3>
 <pre><code>IntelliJ IDEA &gt; Preferences &gt; Plugins &gt; Marketplace &gt; &#x641C;&#x7D22; FindBugs-IDEA &gt; Install
 </code></pre><p><code>FindBugs-IDEA</code> &#x63D2;&#x4EF6;&#x652F;&#x6301; SpotBugs</p>
 <h2 id="&#x4F7F;&#x7528;"><a name="&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x4F7F;&#x7528;</h2>
 <h3 id="&#x751F;&#x6210;&#x62A5;&#x544A;"><a name="&#x751F;&#x6210;&#x62A5;&#x544A;" class="anchor-navigation-ex-anchor" href="#&#x751F;&#x6210;&#x62A5;&#x544A;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. &#x751F;&#x6210;&#x62A5;&#x544A;</h3>
-<p>&#x53EA;&#x68C0;&#x67E5; spotbugs</p>
+<p>&#x53EA;&#x68C0;&#x67E5; spotbugs main</p>
 <pre><code class="lang-bash">$ ./gradlew spotbugsMain
 </code></pre>
 <p>&#x68C0;&#x67E5;&#x6240;&#x6709;&#x7684;</p>
@@ -7154,7 +7171,7 @@
 </code></pre>
 <p>&#x62A5;&#x544A;&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#xFF1A; <code>build/spotbugsReports/main.xml</code></p>
 <h4 id="idea-&#x67E5;&#x770B;&#x62A5;&#x544A;"><a name="idea-&#x67E5;&#x770B;&#x62A5;&#x544A;" class="anchor-navigation-ex-anchor" href="#idea-&#x67E5;&#x770B;&#x62A5;&#x544A;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="idea-&#x67E5;&#x770B;&#x62A5;&#x544A;" class="plugin-anchor" href="#idea-&#x67E5;&#x770B;&#x62A5;&#x544A;"><i class="fa fa-link" aria-hidden="true"></i></a>IDEA &#x67E5;&#x770B;&#x62A5;&#x544A;</h4>
-<pre><code>IDEA &#x5DE6;&#x4E0B;&#x89D2; FindBugs-IDEA &gt; &#x5BFC;&#x5165;&#x6309;&#x94AE;&#xFF08;Import previous saved Bug Collection &gt; &#x9009;&#x62E9;&#x521A;&#x521A;&#x751F;&#x6210;&#x7684;&#x62A5;&#x544A;&#x6587;&#x4EF6;
+<pre><code>IDEA &#x4E0B;&#x65B9; FindBugs-IDEA &gt; &#x5BFC;&#x5165;&#x6309;&#x94AE;&#xFF08;Import previous saved Bug Collection &gt; &#x9009;&#x62E9;&#x521A;&#x521A;&#x751F;&#x6210;&#x7684;&#x62A5;&#x544A;&#x6587;&#x4EF6;
 </code></pre><h2 id="references"><a name="references" class="anchor-navigation-ex-anchor" href="#references"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. References</h2>
 <ul>
 <li><a href="https://github.com/spotbugs/spotbugs" target="_blank">GitHub</a></li>
@@ -7204,7 +7221,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"spotbugs","level":"1.20.10","depth":2,"next":{"title":"高精度计算","level":"1.20.11","depth":2,"path":"java/high-precision-calculation.md","ref":"java/high-precision-calculation.md","articles":[]},"previous":{"title":"Disruptor","level":"1.20.9","depth":2,"path":"java/disruptor.md","ref":"java/disruptor.md","articles":[]},"dir":"ltr"},"config":{"plugins":["sharing","github","-lunr","-search","search-pro","splitter","anchors","anchor-navigation-ex","disqus","adsense"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"bell-blog-1"},"github":{"url":"https://github.com/greedbell/blog"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["搜索"]},"adsense":{"client":"ca-pub-1710914462898396","slot":"1710914462898396","format":"auto","element":".page-inner section","position":"top"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Bell","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bell's blog","language":"zh-hans","gitbook":"3.x.x"},"file":{"path":"java/spot-bugs.md","mtime":"2019-07-05T12:29:10.416Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-05T12:30:06.167Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"spotbugs","level":"1.20.10","depth":2,"next":{"title":"高精度计算","level":"1.20.11","depth":2,"path":"java/high-precision-calculation.md","ref":"java/high-precision-calculation.md","articles":[]},"previous":{"title":"Disruptor","level":"1.20.9","depth":2,"path":"java/disruptor.md","ref":"java/disruptor.md","articles":[]},"dir":"ltr"},"config":{"plugins":["sharing","github","-lunr","-search","search-pro","splitter","anchors","anchor-navigation-ex","disqus","adsense"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"bell-blog-1"},"github":{"url":"https://github.com/greedbell/blog"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["搜索"]},"adsense":{"client":"ca-pub-1710914462898396","slot":"1710914462898396","format":"auto","element":".page-inner section","position":"top"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Bell","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bell's blog","language":"zh-hans","gitbook":"3.x.x"},"file":{"path":"java/spot-bugs.md","mtime":"2019-07-11T12:20:05.891Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-11T12:21:00.983Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
