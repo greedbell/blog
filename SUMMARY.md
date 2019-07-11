@@ -217,6 +217,7 @@
     * [HttpClient](/java/http-client.md)
     * [运行](/java/run.md)
     * [Format](/java/format.md)
+    * [PMD](/java/pmd.md)
     * [Java 协程（coroutine）](/java/coroutine.md)
     * [反射](/java/reflection.md)
     * [Quasar](/java/quasar.md)

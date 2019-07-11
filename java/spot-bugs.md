@@ -37,6 +37,10 @@ spotbugs {
 
 进行配置
 
+#### Filter
+
+* [Chapter 8. Filter Files](http://findbugs.sourceforge.net/manual/filter.html)
+
 ### 安装 IDEA 插件
 
 ```
@@ -49,7 +53,7 @@ IntelliJ IDEA > Preferences > Plugins > Marketplace > 搜索 FindBugs-IDEA > Ins
 
 ### 生成报告
 
-只检查 spotbugs
+只检查 spotbugs main
 
 ```bash
 $ ./gradlew spotbugsMain
@@ -66,7 +70,7 @@ $ ./gradlew check
 #### IDEA 查看报告
 
 ```
-IDEA 左下角 FindBugs-IDEA > 导入按钮（Import previous saved Bug Collection > 选择刚刚生成的报告文件
+IDEA 下方 FindBugs-IDEA > 导入按钮（Import previous saved Bug Collection > 选择刚刚生成的报告文件
 ```
 
 ## References
