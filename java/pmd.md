@@ -36,7 +36,7 @@ pmdTest {
 
 ### 规则
 
-参考文档 [PMD 官方文档](https://pmd.github.io/pmd-6.16.0/)
+参考文档 [PMD 官方文档](https://pmd.github.io/latest/pmd_rules_java.html)
 
 ```xml
 <?xml version="1.0"?>

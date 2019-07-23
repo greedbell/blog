@@ -93,6 +93,33 @@ static 表示不要实例化就可以使用
 
 所以如果除了在末尾外不能在其他位置插入或者删除元素，那么ArrayList效率更高，如果需要经常插入或者删除元素，就选择LinkedList。
 
+### Map
+
+参考 [Initialize a HashMap in Java](https://www.baeldung.com/java-initialize-hashmap)
+
+#### size 为 0 或 1 不可变
+
+```java
+// size 为 0
+Collections.emptyMap();
+// size 为 0
+Collections.singletonMap("Key", "value");
+```
+
+#### 其它情况
+
+使用 Guava
+
+```java
+// 不可变 Map
+ImmutableMap.of("Title", "My New Article", "Title2", "Second Article");
+// 可变 Map
+Maps.newHashMap(ImmutableMap.of("Title", "My New Article", "Title2", "Second Article"))
+```
+
+### List
+
+
 ## JSON to java bean
 
 * [jsonschema2pojo](http://www.jsonschema2pojo.org/)
@@ -193,7 +220,7 @@ public @interface Test {
 
 ## DI
 
-依赖注入
+依赖注入（Dependency Injection）
 
 依赖注入(DI)和控制反转(IOC)是从不同的角度的描述的同一件事情，就是指通过引入IOC容器，利用依赖关系注入的方式，实现对象之间的解耦
 
