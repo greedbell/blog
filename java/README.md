@@ -29,12 +29,25 @@
 
 ## Java修饰符
 
+类
+
 |  | 类内部	| 本包 | 子类 | 外部包 |
 | :---: | :---: | :---: | :---: | :---: |
 | public | √ | √ | √ | √ |
 | protected | √ | √ | √	| × |
-| default | √ | √ | × | × |
+| no modifier | √ | √ | × | × |
 | private | √ | × | × | × |
+
+方法
+
+|  | 类内部	| 本包 | 子类 | 外部包 |
+| :---: | :---: | :---: | :---: | :---: |
+| public | √ | √ | √ | √ |
+| protected | √ | √ | √	| × |
+| no modifier | √ | √ | × | × |
+| private | √ | × | × | × |
+
+`no modifier` = `package-private`，不加修饰语
 
 ## Java变量
 

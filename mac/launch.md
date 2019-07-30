@@ -6,25 +6,38 @@
 
 ## Launchd Daemon
 
-plist文件存在的目录
+* [Launch Daemons and Agents](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html#//apple_ref/doc/uid/10000172i-SW7-BCIEDDBJ)
+
+### plist 文件存在的目录
+
+#### 在使用者登入时载入
 
 * ~/Library/LaunchAgents  由用户自己定义的任务项
 * /Library/LaunchAgents 由管理员为用户定义的任务项
-* /System/Library/LaunchAgents  由Mac OS X为用户定义的任务项
+* /System/Library/LaunchAgents  由 Mac OS X 为用户定义的任务项
 
-当登录之后启动的进程
+#### 在开机时载入
 
-* ~/Library/LaunchDaemons 由管理员定义的守护进程任务项
-* /Library/LaunchDaemons
-* /System/Library/LaunchDaemons 由Mac OS X定义的守护进程任务项
+* /Library/LaunchDaemons 由管理员为用户定义的守护进程任务项
+* /System/Library/LaunchDaemons 由 Mac OS X 定义的守护进程任务项
 
-任务操作
+### 任务操作
 
-* 加载任务 `launchctl load -w ***.plist` ；-w选项会将plist文件中无效的key覆盖掉，建议加上
+* 加载任务 `launchctl load -w ***.plist` ；-w 选项会将plist文件中无效的key覆盖掉，建议加上
 * 删除任务 `launchctl unload -w ***.plist`
 * 查看任务列表 `launchctl list`；列表会显示很多任务，建议过滤一下：launchctl list | grep '任务的部分名字'
 
-2.直接创建、修改、删除相关目录下面的plist文件。
+### launchd plist 文件说明
+
+* Label: 任务名称，唯一的 Key
+* ProgramArguments: 程序运行参数，第一个为需要执行的程序路径
+* inetdCompatibility:
+* KeepAlive: 是否始终运行
+* RunAtLoad: 是否开启自启动
+* StartCalendarInterval: 运行的时间，单个时间点使用dict，多个时间点使用 array <dict>
+* StartInterval: 时间间隔，与StartCalendarInterval使用其一，单位为秒
+* StandardInPath、StandardOutPath、StandardErrorPath：标准的输入输出错误文件，这里建议不要使用 .log 作为后缀，会打不开里面的信息。
+
 
 ## StartupItems
 
@@ -33,28 +46,3 @@ StartupItems一般存放在以下两个路径下：
 1）/System/Library/StartupItems
 
 2）/Library/StartupItems
-
-
-## crash
-
-```
-
-BSD process name corresponding to current thread: plugin-container
-
-Mac OS version:
-16D32
-
-Kernel version:
-Darwin Kernel Version 16.4.0: Thu Dec 22 22:53:21 PST 2016; root:xnu-3789.41.3~3/RELEASE_X86_64
-Kernel UUID: C67A8D03-DEAC-35B8-8F68-06FF7B687215
-Kernel slide:     0x0000000002200000
-Kernel text base: 0xffffff8002400000
-__HIB  text base: 0xffffff8002300000
-System model name: MacBookPro11,4 (Mac-06F11FD93F0323C5)
-
-System uptime in nanoseconds: 24790762300817
-last loaded kext at 1166571048252: com.apple.iokit.IOBluetoothUSBDFU	5.0.3f1 (addr 0xffffff7f85408000, size 12288)
-last unloaded kext at 1651656867550: com.apple.driver.usb.cdc	5.0.0 (addr 0xffffff7f85401000, size 28672)
-loaded kexts:
-com.apple.driver.AudioAUUC	1.70
-```

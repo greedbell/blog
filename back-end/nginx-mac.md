@@ -41,11 +41,11 @@ sudo brew services stop nginx
 
 
 ```sh
-mkdir -p ~/Library/LaunchAgents
+mkdir -p ~/Library/LaunchDaemons
 
-cp /usr/local/opt/nginx/homebrew.mxcl.nginx.plist ~/Library/LaunchAgents/
+cp /usr/local/opt/nginx/homebrew.mxcl.nginx.plist /Library/LaunchDaemons/
 
-launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist
+launchctl load -w /Library/LaunchDaemons/homebrew.mxcl.nginx.plist
 ```
 
 ## nginx 配置 fastcgi
