@@ -9,7 +9,7 @@
 
 ## ubuntu nginx 配置 Let's Encrypt
 
-[certbot 官网](https://certbot.eff.org/) 选择 `nginx` `ubuntu`版本,打开 [Nginx on Ubuntu 14.04 (trusty)](https://certbot.eff.org/#ubuntutrusty-nginx)
+[certbot 官网](https://certbot.eff.org/) 选择 `nginx` `ubuntu`版本,打开 [Nginx on Ubuntu (other)](https://certbot.eff.org/lets-encrypt/ubuntuother-nginx)
 
 ### 安装依赖
 
@@ -31,7 +31,7 @@ $ ./certbot-auto
 
 * nginx 模式
 
-> 这个模式配置最简单，直接 `./certbot-auto --nginx` 全部搞定，不过这是 `alpha` 版，使用前最好先备份配置
+> 这个模式配置最简单，直接 `./certbot-auto --nginx` 全部搞定，不过这是 `alpha` 版，使用前最好先备份 `nginx` 配置
 
 ### nginx 模式
 

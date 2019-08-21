@@ -31,7 +31,6 @@
 
 * Label: 任务名称，唯一的 Key
 * ProgramArguments: 程序运行参数，第一个为需要执行的程序路径
-* inetdCompatibility:
 * KeepAlive: 是否始终运行
 * RunAtLoad: 是否开启自启动
 * StartCalendarInterval: 运行的时间，单个时间点使用dict，多个时间点使用 array <dict>

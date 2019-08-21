@@ -81,7 +81,7 @@ docker rm -f $(docker ps -a -q)
 $ docker images
 ```
 
-### docker常用命令总结
+### docker 常用命令总结
 
 * docker pull <镜像名:tag> #从官网拉取镜像
 * docker search <镜像名> #搜索在线可用镜像名
@@ -103,6 +103,14 @@ $ docker images
 * docker rm <容器名or ID> #删除单个容器
 * docker rmi <ID> #删除单个镜像
 * docker rmi$(docker images | grep none | awk '{print $3}' | sort -r) #删除所有镜像
+
+#### 创建容器
+
+```sh
+docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+```
+
+* -p: 指定端口映射，格式为：主机(宿主)端口:容器端口
 
 #### 启动停止容器
 
@@ -137,4 +145,13 @@ $ docker images
 
 ```
 docker exec -it <CONTAINER ID + > bash
+```
+
+## 窗口与本机之间拷贝文件
+
+```shell
+# 拷贝到本机
+docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|
+# 拷贝到容器
+docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH
 ```

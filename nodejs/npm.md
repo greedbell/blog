@@ -19,7 +19,7 @@ $ curl -L https://npmjs.org/install.sh | sh
 $ npm update npm -g
 ```
 
-## 参数
+## 子命令
 
 ### install
 
@@ -78,6 +78,15 @@ $ npm help init
 ```shell
 $ npm help 5 package.json
 ```
+
+### npm ci
+
+### npm shrinkwrap
+
+* [使用 npm shrinkwrap 来管理项目依赖](https://tech.meituan.com/2015/10/23/npm-shrinkwrap.html)
+
+生成 `npm-shrinkwrap.json` 文件，固定包版本
+
 
 ## 换源
 
