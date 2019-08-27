@@ -123,6 +123,18 @@ $ kubectl port-forward svc/my-service 5000:6000               # 转发 service �
 * [Kubectl 文档](https://kubernetes.io/docs/reference/kubectl/)
 * [kubectl 命令技巧大全](https://jimmysong.io/kubernetes-handbook/guide/kubectl-cheatsheet.html)
 
+## Other
+
+### Kubernetes Millicores
+
+参考 <https://www.noqcks.io/notes/2016/12/14/kubernetes-understanding-millicores/>
+
+```
+Kubernetes has a new metric called Millicores that is used to measure CPU usage. It is a CPU core split into 1000 units (milli = 1000).
+
+If you have 4 cores, then the CPU capacity of the node is 4000m.
+```
+
 ## References
 
 * [Kubernetes Wikipedia](https://zh.wikipedia.org/wiki/Kubernetes)

@@ -2,13 +2,20 @@
 
 性能分析器
 
+## JDK 监控和故障处理工具
+
+* jps 显示指定系统内所有的 HotSpot 虚拟机进程
+* jstat 收集 HotSpot 虚拟机各方面的运行数据
+* jinfo 显示虚拟机配置信息
+* jmap 生成虚拟机的内存转储快照（heapdump 文件）
+* jhat 用于分析 headpdump 文件，可以用更强大的 VisualVM 替代
+* jstack 显示虚拟机的线程快照
+
 ## JConsole
 
 ```
 jconsole
 ```
-
-## JProfiler
 
 ## VisualVM
 
@@ -19,6 +26,8 @@ jvisualvm
 ```
 
 Debug 断点的时候无法抽样，可以用 sleep() 代替。
+
+## JProfiler
 
 ## dump
 
