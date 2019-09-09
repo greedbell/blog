@@ -56,27 +56,22 @@ Files 是 iOS 11 出的功能，替代了 iOS 10 中 iCloud Drive，除了界面
 
 其他的应用程序可以使用 UIDocumentBrowserViewController 类或者 UIDocumentPickerViewController 类，访问存储的文档。这两个类提供了一个标准的用户界面（即和系统的 File App 相同的那个界面），用于浏览文件，或者与文件进行交互（增删改查）。但是呢，我们也可以使用 FileProviderUI 框架将一些自定义的操作添加到浏览器的上下文菜单中
 
-<<<<<<< HEAD
 ## 使用
-=======
+
 * UIDocumentBrowserViewController: 只适用于 iOS11 及以上
 * UIDocumentPickerViewController: 适用于所有版本，在 iOS 11 及以上效果和 UIDocumentBrowserViewController 一致。
 
 ### UIDocumentPickerViewController
->>>>>>> origin/master
 
 使用 UIDocumentPickerViewController 需要先开启 App 的 iCloud 功能。
 
 #### Document Picker Modes
 
-<<<<<<< HEAD
-=======
 * UIDocumentPickerModeImport：导入
 * UIDocumentPickerModeOpen：打开
 * UIDocumentPickerModeExportToService：导出
 * UIDocumentPickerModeMoveToService：直接访问
 
->>>>>>> origin/master
 ## References
 
 * [File Provider](https://developer.apple.com/documentation/fileprovider) iOS 11 Files
