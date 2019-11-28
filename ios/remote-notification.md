@@ -48,3 +48,11 @@ App 在前台的时候，有推送消息过来时调用。
 */
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)(void))completionHandler __IOS_AVAILABLE(10.0) __WATCHOS_AVAILABLE(3.0) __TVOS_PROHIBITED;
 ```
+
+## 通知测试
+
+参考 <https://stackoverflow.com/questions/7361298/how-to-test-push-notification-is-working-in-my-application>
+
+```shell
+curl -d '{"aps":{"alert":"This is a test notification"}}' --cert YourCertificate.pem:YourPassword -H "apns-topic: com.example.yourapp" --http2  https://api.development.push.apple.com/3/device/YourDeviceToken
+```

@@ -40,6 +40,11 @@ macaca doctor
 npm install app-inspector -g
 ```
 
+```bash
+brew install usbmuxd
+brew install ios-webkit-debug-proxy
+```
+
 获取 Device ID 参考 [ Get the Device ID](https://macacajs.github.io/app-inspector/guide/get-device-id.html#ios)
 
 #### iOS 真机使用
