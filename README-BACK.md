@@ -325,6 +325,7 @@
     * [Sharing Extension](/ios/sharine-extension.md)
     * [实用工具](/ios/tools.md)
     * [iOS 单元测试](/ios/unit-test.md)
+    * [GCD](/ios/gcd.md)
 * [mac](/mac)
     * [开机自启动](/mac/auto-launch.md)
     * [Mac OSX的开机启动配置](/mac/launch.md)
