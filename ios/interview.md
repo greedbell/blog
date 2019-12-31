@@ -3,43 +3,44 @@
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 <!-- code_chunk_output -->
 
-* [面试](#面试)
-	* [Objective-C](#objective-c)
-		* [`weak` `strong` `assign` `copy` 区别](#weak-strong-assign-copy-区别)
-		* [ivar、getter、setter](#ivar-getter-setter)
-		* [`@protocol` 和 `category` 中如何使用 `@property`](#protocol-和-category-中如何使用-property)
-		* [`mutableCopy` 和 `copy`](#mutablecopy-和-copy)
-		* [`NSHashTable` VS `NSMapTable`](#nshashtable-vs-nsmaptable)
-		* [`[obj foo]` 和 `objc_msgSend()` 关系](#obj-foo-和-objc_msgsend-关系)
-		* [`ARC` 和 `MRC`](#arc-和-mrc)
-		* [`self` `super` 区别](#self-super-区别)
-		* [`@synthesize` 和 `@dynamic` 区别](#synthesize-和-dynamic-区别)
-		* [GCD](#gcd)
-			* [`dispatch_barrier_async`](#dispatch_barrier_async)
-			* [`dispatch_group_async`](#dispatch_group_async)
-			* [`dispatch_semaphore_*`](#dispatch_semaphore_)
-		* [有哪些方法实现异步、延时](#有哪些方法实现异步-延时)
-		* [KVO 和 KVC](#kvo-和-kvc)
-		* [runtime](#runtime)
-		* [runloop](#runloop)
-		* [`+(void)load` 和 `+(void)initialize` 的区别](#voidload-和-voidinitialize-的区别)
-	* [iOS](#ios)
-		* [`lldb` 常用命令](#lldb-常用命令)
-		* [Xcode 调试技巧](#xcode-调试技巧)
-		* [iOS 装载和运行机制](#ios-装载和运行机制)
-		* [iOS 性能调优](#ios-性能调优)
-		* [AutoLayout 和 UIViewAutoresizing](#autolayout-和-uiviewautoresizing)
-		* [autoreleasePool](#autoreleasepool)
-		* [UIViewController 多次 push pop 后，内存会怎样？](#uiviewcontroller-多次-push-pop-后内存会怎样)
-		* [UIScrollView 使用 AutoLayout 布局注意事项](#uiscrollview-使用-autolayout-布局注意事项)
-		* [点击事件传递机制](#点击事件传递机制)
-		* [iPhoneX 适配](#iphonex-适配)
-		* [MVC 和 MVVM，MVP](#mvc-和-mvvmmvp)
-		* [数据持久化的几个方案](#数据持久化的几个方案)
-		* [`UITableview` 的优化方法（缓存高度，异步绘制，减少层级，hide，避免离屏渲染）](#uitableview-的优化方法缓存高度异步绘制减少层级hide避免离屏渲染)
-		* [第三方框架](#第三方框架)
-		* [设计模式](#设计模式)
-	* [References](#references)
+- [., 面试](#面试)
+  - [Objective-C](#objective-c)
+    - [`weak` `strong` `assign` `copy` 区别](#weak-strong-assign-copy-区别)
+    - [ivar、getter、setter](#ivar-getter-setter)
+    - [`@protocol` 和 `category` 中如何使用 `@property`](#protocol-和-category-中如何使用-property)
+    - [`mutableCopy` 和 `copy`](#mutablecopy-和-copy)
+    - [`NSPointerArray` `NSHashTable` `NSMapTable` 比较](#nspointerarray-nshashtable-nsmaptable-比较)
+    - [`[obj foo]` 和 `objc_msgSend()` 关系](#obj-foo-和-objc_msgsend-关系)
+    - [`ARC` 和 `MRC`](#arc-和-mrc)
+    - [`self` `super` 区别](#self-super-区别)
+    - [`self->_para` 和 `_para` 还有 `self.para` 的区别](#self-_para-和-_para-还有-selfpara-的区别)
+    - [`@synthesize` 和 `@dynamic` 区别](#synthesize-和-dynamic-区别)
+    - [GCD](#gcd)
+      - [`dispatch_barrier_async`](#dispatch_barrier_async)
+      - [`dispatch_group_async`](#dispatch_group_async)
+      - [`dispatch_semaphore_*`](#dispatch_semaphore_)
+    - [有哪些方法实现异步、延时](#有哪些方法实现异步-延时)
+    - [KVO 和 KVC](#kvo-和-kvc)
+    - [runtime](#runtime)
+    - [runloop](#runloop)
+    - [`+(void)load` 和 `+(void)initialize` 的区别](#voidload-和-voidinitialize-的区别)
+  - [iOS](#ios)
+    - [`lldb` 常用命令](#lldb-常用命令)
+    - [Xcode 调试技巧](#xcode-调试技巧)
+    - [iOS 装载和运行机制](#ios-装载和运行机制)
+    - [iOS 性能调优](#ios-性能调优)
+    - [AutoLayout 和 UIViewAutoresizing](#autolayout-和-uiviewautoresizing)
+    - [autoreleasePool](#autoreleasepool)
+    - [UIViewController 多次 push pop 后，内存会怎样？](#uiviewcontroller-多次-push-pop-后内存会怎样)
+    - [UIScrollView 使用 AutoLayout 布局注意事项](#uiscrollview-使用-autolayout-布局注意事项)
+    - [点击事件传递机制](#点击事件传递机制)
+    - [iPhoneX 适配](#iphonex-适配)
+    - [MVC 和 MVVM，MVP](#mvc-和-mvvmmvp)
+    - [数据持久化的几个方案](#数据持久化的几个方案)
+    - [`UITableview` 的优化方法（缓存高度，异步绘制，减少层级，hide，避免离屏渲染）](#uitableview-的优化方法缓存高度异步绘制减少层级hide避免离屏渲染)
+    - [第三方框架](#第三方框架)
+    - [设计模式](#设计模式)
+  - [References](#references)
 
 <!-- /code_chunk_output -->
 
@@ -69,8 +70,9 @@ assign 的“设置方法”只会执行针对“纯量类型” (scalar type，
 
 ### `mutableCopy` 和 `copy`
 
-### `NSHashTable` VS `NSMapTable`
+### `NSPointerArray` `NSHashTable` `NSMapTable` 比较
 
+* NSPointerArray 相对于 NSArray，可以弱引用，但是只能通过 index 索引，不能通过 object 索引。
 * NSHashTable 是 NSSet 的通用版本。可以弱引用、copy
 * NSMapTable 是 NSDictionary 的通用版本。可以弱引用、copy
 
