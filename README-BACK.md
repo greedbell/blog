@@ -320,6 +320,7 @@
     * [UISplitViewController](/ios/split-view-controller.md)
     * [pod lib create 实现过程](/ios/pod-lib-create.md)
     * [CI服务器与自动化部署](/ios/ci.md)
+    * [提交 App](/ios/submit-app.md)
     * [Handoff](/ios/handoff.md)
     * [Selector](/ios/selector.md)
     * [Sharing Extension](/ios/sharine-extension.md)
