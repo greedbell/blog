@@ -6,6 +6,12 @@
 
 ## 安装
 
+### brew
+
+```sh
+brew install ruby
+```
+
 ### rvm
 
 [Github](https://github.com/rvm/rvm)

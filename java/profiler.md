@@ -27,36 +27,32 @@ jvisualvm
 
 Debug 断点的时候无法抽样，可以用 sleep() 代替。
 
+<<<<<<< Updated upstream
 ## JProfiler
 
 ## dump
+=======
+## ps
+>>>>>>> Stashed changes
 
-先获取进度 ID
+先获取进程 ID
 
 ```
 # ps -ef | grep java
 root         1     0  1 19:32 ?        00:00:31 /usr/local/java/jre/bin/java
 ```
 
-### heap dump：
+## jmap
 
-JDK 自带工具 `jmap`
+JDK 自带工具 `jmap`，查看堆情况
 
 ```
 jmap -dump:format=b,file=heap.hprof 1
 ```
 
-### thread dump：
+## jstatd
 
-JDK 自带工具 `jstack`
-
-```
-jstack 1 > thread.txt
-```
-
-## remote
-
-jstatd
+远程守护
 
 * [jstatd - Virtual Machine jstat Daemon](https://docs.oracle.com/javase/7/docs/technotes/tools/share/jstatd.html)
 
@@ -67,6 +63,16 @@ jstatd
 ```
 jstack <pid> > memory.dump
 ```
+
+JDK 自带工具 `jstack`
+
+```
+jstack -l <pid> > thread.dump
+```
+
+## jstat
+
+## jcmd
 
 ## JetBrains JVM Debugger Memory View plugin
 
