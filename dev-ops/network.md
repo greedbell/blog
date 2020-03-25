@@ -35,6 +35,16 @@ nc -l -p 22222 < /dev/zero
 nc ip_of_server 22222 > | pv
 ```
 
+## nmap
+
+扫描 IP 端口等信息
+
+```sh
+nmap -v -sn 172.16.1-254.1-254
+```
+
+ping 172.16.1.1 到 172.16.254.254 范围内的所有 IP
+
 ## References
 
 * [netperf 与网络性能测量](https://www.ibm.com/developerworks/cn/linux/l-netperf/)

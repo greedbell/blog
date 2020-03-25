@@ -17,7 +17,7 @@ gem install cocoapods
 
 ## lib
 
-创建pod库
+开发 pod 库
 
 ### 用Cocoapods的模板
 
@@ -30,3 +30,13 @@ $ pod lib create GreedAppleWallet
 ```
 $ pod lib create GreedAppleWallet --template-url=https://github.com/GreedBell/pod-template
 ```
+
+### lint
+
+```
+pod lib lint GreedAppleWallet.podspec
+```
+
+## trunk
+
+发布 pod 库
