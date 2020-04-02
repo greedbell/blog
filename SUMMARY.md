@@ -1,6 +1,8 @@
 # Bell's Blog
 
 * [Apple](/apple/README.md)
+    * [Apple 商务管理](/apple/apple-bussiness.md)
+    * [自定 App](/apple/custom-app.md)
     * [Mac Pro 换 SSD](/apple/mac-pro-change-ssd.md)
     * [监听 iOS App 新评论](/apple/rss-app-reviews.md)
     * [转移 App](/apple/transfer-app.md)
@@ -175,6 +177,7 @@
     * [# 端口相关命令](/dev-ops/port.md)
     * [Logrotate 管理日志](/dev-ops/logrotate.md)
     * [docker](/dev-ops/docker.md)
+    * [Mac 生成 sha256sum](/dev-ops/mac-sha256sum.md)
     * [tar](/dev-ops/tar.md)
     * [为普通用户添加 sudo 权限](/dev-ops/sudo.md)
 * [Shell](/shell/README.md)
