@@ -34,7 +34,7 @@
 <!-- /code_chunk_output -->
 
 
-## centos 安装
+## centos 环境
 
 ### yum 方式安装
 
@@ -63,34 +63,54 @@ docker pull jenkins:latest
 docker run -d --name jenkins -p 8080:8080 -v /srv/docker/jenkins -t jenkins:latest
 ```
 
-## mac 安装
+## mac 环境
 
-### 方法一：
+### 安装
+
+#### 方法一：
 
 mac最新版下载 <http://mirrors.jenkins-ci.org/osx-stable/latest>
 
-### 方法二：
+#### 方法二：
 
 ```shell
 $ brew install jenkins
 ```
 
-## Mac 环境自启动
+后面的使用都用的方法二
+
+### Mac 环境自启动
 
 ```sh
-# 停止 Jenkins
-$ sudo launchctl unload /Library/LaunchDaemons/org.jenkins-ci.plist
+# 停止 Jenkins 自启动
+$ sudo launchctl unload ～/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
 
-# 开启 Jenkins
-$ sudo launchctl load /Library/LaunchDaemons/org.jenkins-ci.plist
+# 开启 Jenkins 自启动
+$ sudo launchctl load ～/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
 ```
 
-## 启动
+### 启动
+
+启动，停止，重启 jenkins
 
 ```shell
-$ nohup jenkins > ~/.jenkins/run.log 2>&1 &
+brew services start jenkins
+brew services stop jenkins
+brew services restart jenkins
 ```
+
 登录 <http://localhost:8080/> 访问`jenkins`.
+
+### 开启局域网访问
+
+```
+～/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
+/usr/local/opt/jenkins/homebrew.mxcl.jenkins.plist
+```
+
+httpListenAddress 改为 0.0.0.0
+
+再重启服务
 
 ## 账户
 
@@ -185,3 +205,6 @@ Description：介绍
 * <http://www.cnblogs.com/zz0412/p/jenkins_jj_14.html>
 * <http://www.jianshu.com/p/c69deb29720d>
 * <http://www.jianshu.com/p/a17167274463>
+
+
+https://yq.aliyun.com/articles/575562
