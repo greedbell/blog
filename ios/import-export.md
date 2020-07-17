@@ -29,6 +29,30 @@ NSMutableString *filesStr = [NSMutableString stringWithString:@"Documents文件�
 * Document Types 已知格式
 * Imported UTIs 添加新的格式
 
+### Document Types
+
+#### Additional document type properties
+
+LSHandlerRank
+
+* Owner: 打开一次后会记住 App，下次直接用该 App 打开
+* Alternate
+* Default
+* None: 不会出现在可打开 App 列表
+
+CFBundleTypeRole
+
+* Editor
+* Viewer
+* Shell
+* QLGenerator
+* None
+
+### 打开外部文件
+
+* LSSupportsOpeningDocumentsInPlace
+* UIFileSharingEnabled
+
 ## References
 
 * [iOS-实现文件导入和导出](https://www.jianshu.com/p/c9484a4e9fc8)
