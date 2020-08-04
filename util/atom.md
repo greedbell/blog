@@ -3,21 +3,21 @@
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 <!-- code_chunk_output -->
 
-* [Atom](#atom)
-	* [Markdown](#markdown)
-		* [默认 Markdown](#默认-markdown)
-			* [预览](#预览)
-			* [代码段](#代码段)
-			* [相关资料](#相关资料)
-		* [markdown-preview-enhanced](#markdown-preview-enhancedhttpsgithubcomshd101wyymarkdown-preview-enhanced)
-	* [插件](#插件)
-	* [设置 socks 代理](#设置-socks-代理)
+- [Atom](#atom)
+  - [Markdown](#markdown)
+    - [默认 Markdown 插件 markdown-preview](#默认-markdown-插件-markdown-preview)
+      - [预览](#预览)
+      - [代码段](#代码段)
+      - [相关资料](#相关资料)
+    - [markdown-preview-enhanced](#markdown-preview-enhancedhttpsgithubcomshd101wyymarkdown-preview-enhanced)
+  - [插件](#插件)
+  - [设置 socks 代理](#设置-socks-代理)
 
 <!-- /code_chunk_output -->
 
 ## Markdown
 
-### 默认 Markdown
+### 默认 Markdown 插件 markdown-preview
 
 #### 预览
 

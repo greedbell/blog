@@ -91,7 +91,7 @@ $ sudo launchctl load ～/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
 
 ### 启动
 
-启动，停止，重启 jenkins
+启动，停止，重启 jenkins | jenkins-lts
 
 ```shell
 brew services start jenkins

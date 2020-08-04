@@ -17,6 +17,14 @@ yum install -y gitlab-ci-multi-runner
 
 * <https://github.com/outcoldman/docker-gitlab-ci-multi-runner-ruby>
 
-## .gitlab-ci.yml
+## 配置
 
-* <http://192.168.1.11/help/ci/yaml/README.md>
+* [.gitlab-ci.yml 配置](http://192.168.1.11/help/ci/yaml/README.md)
+
+### 概念
+
+Pipeline > Stages > Jobs
+
+## References
+
+* [用 GitLab CI 进行持续集成](https://scarletsky.github.io/2016/07/29/use-gitlab-ci-for-continuous-integration/)
