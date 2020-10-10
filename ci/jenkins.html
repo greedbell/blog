@@ -5566,7 +5566,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.28.49" data-path="../android/360-jiagu.html">
+        <li class="chapter " data-level="1.28.49" data-path="../android/sha1.html">
+            
+                <a href="../android/sha1.html">
+            
+                    
+                    Android 获取 md5 sha1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.50" data-path="../android/360-jiagu.html">
             
                 <a href="../android/360-jiagu.html">
             
@@ -5579,7 +5592,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.28.50" data-path="../android/translucent-status-bar.html">
+        <li class="chapter " data-level="1.28.51" data-path="../android/translucent-status-bar.html">
             
                 <a href="../android/translucent-status-bar.html">
             
@@ -5592,7 +5605,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.28.51" data-path="../android/tools.html">
+        <li class="chapter " data-level="1.28.52" data-path="../android/tools.html">
             
                 <a href="../android/tools.html">
             
@@ -5605,7 +5618,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.28.52" data-path="../android/gif.html">
+        <li class="chapter " data-level="1.28.53" data-path="../android/gif.html">
             
                 <a href="../android/gif.html">
             
@@ -7473,6 +7486,7 @@
 <li><a href="#&#x65B9;&#x6CD5;&#x4E8C;">&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;</a></li>
 </ul>
 </li>
+<li><a href="#mac-&#x73AF;&#x5883;&#x81EA;&#x542F;&#x52A8;">Mac &#x73AF;&#x5883;&#x81EA;&#x542F;&#x52A8;</a></li>
 <li><a href="#&#x542F;&#x52A8;">&#x542F;&#x52A8;</a></li>
 <li><a href="#&#x8D26;&#x6237;">&#x8D26;&#x6237;</a><ul>
 <li><a href="#&#x5F00;&#x542F;&#x7528;&#x6237;&#x6CE8;&#x518C;">&#x5F00;&#x542F;&#x7528;&#x6237;&#x6CE8;&#x518C;</a></li>
@@ -7520,8 +7534,14 @@ sudo chkconfig jenkins on</p>
 <h4 id="&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;"><a name="&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;" class="plugin-anchor" href="#&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;</h4>
 <p>mac&#x6700;&#x65B0;&#x7248;&#x4E0B;&#x8F7D; <a href="http://mirrors.jenkins-ci.org/osx-stable/latest" target="_blank">http://mirrors.jenkins-ci.org/osx-stable/latest</a></p>
 <h4 id="&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;"><a name="&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;" class="plugin-anchor" href="#&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;</h4>
-<pre><code class="lang-shell">$ brew install jenkins
-</code></pre>
+<p>&#x53C2;&#x8003; <a href="https://jenkins.io/download/lts/macos/" target="_blank">https://jenkins.io/download/lts/macos/</a></p>
+<ul>
+<li>Install the latest LTS version: brew install jenkins-lts</li>
+<li>Install a specific LTS version: brew install jenkins-lts@YOUR_VERSION</li>
+<li>Start the Jenkins service: brew services start jenkins-lts</li>
+<li>Restart the Jenkins service: brew services restart jenkins-lts</li>
+<li>Update the Jenkins version: brew upgrade jenkins-lts</li>
+</ul>
 <p>&#x540E;&#x9762;&#x7684;&#x4F7F;&#x7528;&#x90FD;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x4E8C;</p>
 <h3 id="mac-&#x73AF;&#x5883;&#x81EA;&#x542F;&#x52A8;"><a name="mac-&#x73AF;&#x5883;&#x81EA;&#x542F;&#x52A8;" class="anchor-navigation-ex-anchor" href="#mac-&#x73AF;&#x5883;&#x81EA;&#x542F;&#x52A8;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2. Mac &#x73AF;&#x5883;&#x81EA;&#x542F;&#x52A8;</h3>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#x505C;&#x6B62; Jenkins &#x81EA;&#x542F;&#x52A8;</span>
@@ -7645,7 +7665,7 @@ Description&#xFF1A;&#x4ECB;&#x7ECD;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Jenkins","level":"1.16.1","depth":2,"next":{"title":"travis-ci自动更新gh-pages分支","level":"1.16.2","depth":2,"path":"ci/travis-update-gh-pages.md","ref":"ci/travis-update-gh-pages.md","articles":[]},"previous":{"title":"ci","level":"1.16","depth":1,"ref":"","articles":[{"title":"Jenkins","level":"1.16.1","depth":2,"path":"ci/jenkins.md","ref":"ci/jenkins.md","articles":[]},{"title":"travis-ci自动更新gh-pages分支","level":"1.16.2","depth":2,"path":"ci/travis-update-gh-pages.md","ref":"ci/travis-update-gh-pages.md","articles":[]},{"title":"Jenkins 高级使用","level":"1.16.3","depth":2,"path":"ci/jenkins-advanced-useage.md","ref":"ci/jenkins-advanced-useage.md","articles":[]},{"title":"Jenkins Q&A","level":"1.16.4","depth":2,"path":"ci/jenkins-q-a.md","ref":"ci/jenkins-q-a.md","articles":[]},{"title":"travis","level":"1.16.5","depth":2,"path":"ci/travis.md","ref":"ci/travis.md","articles":[]},{"title":"centos 安装 gitlab ci","level":"1.16.6","depth":2,"path":"ci/gitlab-ci.md","ref":"ci/gitlab-ci.md","articles":[]},{"title":"Jenkins 监听 Gitlab 事件","level":"1.16.7","depth":2,"path":"ci/jenkins-hook-gitlab.md","ref":"ci/jenkins-hook-gitlab.md","articles":[]},{"title":"Drone","level":"1.16.8","depth":2,"path":"ci/drone.md","ref":"ci/drone.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["sharing","github","-lunr","-search","search-pro","splitter","anchors","anchor-navigation-ex","disqus","adsense"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"bell-blog-1"},"github":{"url":"https://github.com/greedbell/blog"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["搜索"]},"adsense":{"client":"ca-pub-1710914462898396","slot":"1710914462898396","format":"auto","element":".page-inner section","position":"top"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Bell","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bell's blog","language":"zh-hans","gitbook":"3.x.x"},"file":{"path":"ci/jenkins.md","mtime":"2020-08-04T02:33:32.885Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-04T02:34:21.205Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Jenkins","level":"1.16.1","depth":2,"next":{"title":"travis-ci自动更新gh-pages分支","level":"1.16.2","depth":2,"path":"ci/travis-update-gh-pages.md","ref":"ci/travis-update-gh-pages.md","articles":[]},"previous":{"title":"ci","level":"1.16","depth":1,"ref":"","articles":[{"title":"Jenkins","level":"1.16.1","depth":2,"path":"ci/jenkins.md","ref":"ci/jenkins.md","articles":[]},{"title":"travis-ci自动更新gh-pages分支","level":"1.16.2","depth":2,"path":"ci/travis-update-gh-pages.md","ref":"ci/travis-update-gh-pages.md","articles":[]},{"title":"Jenkins 高级使用","level":"1.16.3","depth":2,"path":"ci/jenkins-advanced-useage.md","ref":"ci/jenkins-advanced-useage.md","articles":[]},{"title":"Jenkins Q&A","level":"1.16.4","depth":2,"path":"ci/jenkins-q-a.md","ref":"ci/jenkins-q-a.md","articles":[]},{"title":"travis","level":"1.16.5","depth":2,"path":"ci/travis.md","ref":"ci/travis.md","articles":[]},{"title":"centos 安装 gitlab ci","level":"1.16.6","depth":2,"path":"ci/gitlab-ci.md","ref":"ci/gitlab-ci.md","articles":[]},{"title":"Jenkins 监听 Gitlab 事件","level":"1.16.7","depth":2,"path":"ci/jenkins-hook-gitlab.md","ref":"ci/jenkins-hook-gitlab.md","articles":[]},{"title":"Drone","level":"1.16.8","depth":2,"path":"ci/drone.md","ref":"ci/drone.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["sharing","github","-lunr","-search","search-pro","splitter","anchors","anchor-navigation-ex","disqus","adsense"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"bell-blog-1"},"github":{"url":"https://github.com/greedbell/blog"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["搜索"]},"adsense":{"client":"ca-pub-1710914462898396","slot":"1710914462898396","format":"auto","element":".page-inner section","position":"top"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":false,"google":false,"instapaper":false,"twitter":false,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Bell","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bell's blog","language":"zh-hans","gitbook":"3.x.x"},"file":{"path":"ci/jenkins.md","mtime":"2020-10-10T03:13:22.180Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-10T03:14:09.188Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
