@@ -26,6 +26,8 @@ autossh -M 8001 -fCNR 7770:localhost:8080 bell@node.greedlab.com
 * -f ：后台运行
 * -n ：配合 -f 参数使用
 * -N ：不执行远程命令，专为端口转发度身打造
+* -R ：将远程主机(服务器)的某个端口转发到本地端指定机器的指定端口
+* -L ：将本地机(客户机)的某个端口转发到远端指定机器的指定端口
 * 7770:localhost:8080 ：公网主机 7770 端口数据转发到内网主机 8080 端口
 
 ## 测试 autossh
@@ -53,3 +55,14 @@ server {
 ```
 
 现在 xxxxx.greedlab.com 就可以访问内网主机 8080 端口的服务了。
+
+## 配置 ssh 断开重连
+
+配置外网主机的 `/etc/ssh/sshd_config`
+
+```text
+# 30表示30s给客户端发送一次心跳
+ClientAliveInterval 30
+# 3此客户端没有返回心跳，则会断开连接
+ClientAliveCountMax 3
+```

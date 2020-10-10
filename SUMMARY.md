@@ -409,6 +409,7 @@
     * [混淆（Proguard）](/android/proguard.md)
     * [Mac 搭建 Android 开发环境](/android/mac-android-env.md)
     * [Android Studio](/android/android-studio.md)
+    * [Android 获取 md5 sha1](/android/sha1.md)
     * [360 加固保](/android/360-jiagu.md)
     * [状态栏透明](/android/translucent-status-bar.md)
     * [实用工具](/android/tools.md)

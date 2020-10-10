@@ -33,9 +33,9 @@ git config --global --unset https.proxy
 
  或
 
-  ```bash
-  brew install nc
-  ```
+```bash
+brew install nc
+```
 
 ### 配置
 

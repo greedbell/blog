@@ -7,29 +7,30 @@
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 <!-- code_chunk_output -->
 
-* [Jenkins](#jenkins)
-	* [centos 安装](#centos-安装)
-		* [yum 方式安装](#yum-方式安装)
-			* [Start/Stop](#startstop)
-		* [docker 方式安装](#docker-方式安装)
-	* [mac 安装](#mac-安装)
-		* [方法一：](#方法一)
-		* [方法二：](#方法二)
-	* [启动](#启动)
-	* [账户](#账户)
-		* [开启用户注册](#开启用户注册)
-		* [注册用户](#注册用户)
-		* [设置权限](#设置权限)
-	* [环境变量](#环境变量)
-	* [插件](#插件)
-	* [添加 git ssh 证书](#添加-git-ssh-证书)
-	* [新建job](#新建job)
-		* [源码管理](#源码管理)
-		* [构建](#构建)
-		* [注意](#注意)
-	* [Poll SCM](#poll-scm)
-	* [关闭](#关闭)
-	* [Reference](#reference)
+- [Jenkins](#jenkins)
+  - [centos 安装](#centos-安装)
+    - [yum 方式安装](#yum-方式安装)
+      - [Start/Stop](#startstop)
+    - [docker 方式安装](#docker-方式安装)
+  - [mac 安装](#mac-安装)
+    - [方法一：](#方法一)
+    - [方法二：](#方法二)
+  - [Mac 环境自启动](#mac-环境自启动)
+  - [启动](#启动)
+  - [账户](#账户)
+    - [开启用户注册](#开启用户注册)
+    - [注册用户](#注册用户)
+    - [设置权限](#设置权限)
+  - [环境变量](#环境变量)
+  - [插件](#插件)
+  - [添加 git ssh 证书](#添加-git-ssh-证书)
+  - [新建job](#新建job)
+    - [源码管理](#源码管理)
+    - [构建](#构建)
+    - [注意](#注意)
+  - [Poll SCM](#poll-scm)
+  - [关闭](#关闭)
+  - [Reference](#reference)
 
 <!-- /code_chunk_output -->
 
@@ -73,9 +74,15 @@ mac最新版下载 <http://mirrors.jenkins-ci.org/osx-stable/latest>
 
 #### 方法二：
 
-```shell
-$ brew install jenkins
-```
+参考 <https://jenkins.io/download/lts/macos/>
+
+
+* Install the latest LTS version: brew install jenkins-lts
+* Install a specific LTS version: brew install jenkins-lts@YOUR_VERSION
+* Start the Jenkins service: brew services start jenkins-lts
+* Restart the Jenkins service: brew services restart jenkins-lts
+* Update the Jenkins version: brew upgrade jenkins-lts
+
 
 后面的使用都用的方法二
 
