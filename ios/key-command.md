@@ -1,5 +1,6 @@
 # UIKeyCommand
 
+`UIResponder.keyCommands` 可以实现长按 cmd 键弹出快捷键提示
 
 ## References
 

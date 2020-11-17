@@ -344,6 +344,7 @@
     * [快捷键](/mac/shortcut.md)
     * [崩溃](/mac/crash.md)
     * [命令](/mac/command.md)
+    * [macOS Big Sur](/mac/macos-big-sur.md)
     * [Spotlight](/mac/spotlight.md)
     * [Other](/mac/Other.md)
     * [apache](/mac/apache.md)
