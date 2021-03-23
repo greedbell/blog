@@ -5,14 +5,15 @@
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 <!-- code_chunk_output -->
 
-* [触摸事件和手势](#触摸事件和手势)
-	* [JS](#js)
-	* [Android](#android)
-		* [TouchEvent](#touchevent)
-		* [PanResponder](#panresponder)
-	* [iOS](#ios)
-		* [关于sendInputEventWithName事件名自定义](#关于sendinputeventwithname事件名自定义)
-	* [References](#references)
+- [触摸事件和手势](#触摸事件和手势)
+  - [JS](#js)
+  - [Android](#android)
+    - [TouchEvent](#touchevent)
+    - [PanResponder](#panresponder)
+  - [iOS](#ios)
+    - [RCTView](#rctview)
+    - [关于sendInputEventWithName事件名自定义](#关于sendinputeventwithname事件名自定义)
+  - [References](#references)
 
 <!-- /code_chunk_output -->
 
@@ -62,6 +63,10 @@ BackHandler.addEventListener('hardwareBackPress', this._handleBackAction);
 ### PanResponder
 
 ## iOS
+
+### RCTView
+
+##### hitTest:withEvent
 
 ### 关于sendInputEventWithName事件名自定义
 

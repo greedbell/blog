@@ -41,13 +41,13 @@
 
 ```shell
 $ curl -s https://get.sdkman.io | bash
-$ sdk install gradle 4.9
+$ sdk install gradle 5.5
 ```
 
 ### Gradle 安装 Gradle Wrapper
 
 ```sh
-gradle wrapper --gradle-version 3.4.1
+gradle wrapper --gradle-version 5.5
 gradle wrapper --gradle-version 2.14.1
 ```
 

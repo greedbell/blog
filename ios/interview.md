@@ -171,13 +171,34 @@ contentView 不能由 AutoLayout 撑起来
 
 ### 点击事件传递机制
 
-* [iOS 点击事件传递及响应 ](http://blog.flight.dev.qunar.com/2016/10/28/ios-event-mechanism-summary/)
+* [iOS事件处理之Hit-Testing ](https://zhongwuzw.github.io/2016/09/12/iOS%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E4%B9%8BHit-Testing/)
 
 事件的传递过程：
 
 ```
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
+```
+
+系统默认
+
+```
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    if (!self.isUserInteractionEnabled || self.isHidden || self.alpha <= 0.01) {
+        return nil;
+    }
+    if ([self pointInside:point withEvent:event]) {
+        for (UIView *subview in [self.subviews reverseObjectEnumerator]) {
+            CGPoint convertedPoint = [subview convertPoint:point fromView:self];
+            UIView *hitTestView = [subview hitTest:convertedPoint withEvent:event];
+            if (hitTestView) {
+                return hitTestView;
+            }
+        }
+        return self;
+    }
+    return nil;
+}
 ```
 
 事件响应：

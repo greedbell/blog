@@ -114,9 +114,9 @@ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 
 #### 启动停止容器
 
-* docker stop <容器名or ID> #停止某个容器
-* docker start <容器名or ID> #启动某个容器
-* docker kill <容器名or ID> #杀掉某个容器
+* docker stop <容器名 or ID> #停止某个容器
+* docker start <容器名 or ID> #启动某个容器
+* docker kill <容器名 or ID> #杀掉某个容器
 
 ## 免 sudo 使用 docker
 

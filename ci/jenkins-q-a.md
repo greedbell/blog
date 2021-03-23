@@ -22,7 +22,7 @@ Jenkins 的 Post 请求必须带 crumb。或者关闭 jenkins 的 防止跨站�
 unknown error -1=ffffffffffffffff
 ```
 
-参考 <https://www.jianshu.com/p/b03e59560d31>，codesign命令需要进行签名的时候，会访问keychain来获取打包脚本中对应的证书。通过ssh这种方式访问的时候，是没有访问权限的。需要运行如下命令来获得访问权限：
+参考 <https://www.jianshu.com/p/b03e59560d31>，codesign 命令需要进行签名的时候，会访问 keychain 来获取打包脚本中对应的证书。通过 ssh 这种方式访问的时候，是没有访问权限的。需要运行如下命令来获得访问权限：
 
 ```sh
 $ security list-keychains
