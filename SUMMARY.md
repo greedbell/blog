@@ -283,6 +283,7 @@
     * [WKWebView 的使用](/ios/wkwebview-usage.md)
     * [xcrun](/ios/xcrun.md)
     * [支持 macOS](/ios/support-macos.md)
+    * [苹果登录](/ios/apple-login.md)
     * [fastlane](/ios/fastlane.md)
     * [iOS13](/ios/ios-13.md)
     * [iPAd 分屏](/ios/iPad分屏.md)
