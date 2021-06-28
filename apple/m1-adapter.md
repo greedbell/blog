@@ -13,3 +13,9 @@
 
 * Xcode 不要使用 Rosetta 打开
 * developer.apple.com 添加 M1 设备 ID，Provisioning Profiles 添加对应设备
+
+## node
+
+### npm i 特别慢
+
+参考 <https://stackoverflow.com/a/66242029/6283925> 升级 node 到 15 以上，可以加速很多
