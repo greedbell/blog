@@ -18,4 +18,8 @@
 
 ### npm i 特别慢
 
-参考 <https://stackoverflow.com/a/66242029/6283925> 升级 node 到 15 以上，可以加速很多
+参考 <https://stackoverflow.com/a/66242029/6283925> 升级 node 到 14 以上，可以加速很多
+
+## M1 上字体变小问题
+
+没找到解决方法

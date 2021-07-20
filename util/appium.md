@@ -34,20 +34,24 @@ npm install -g appium-doctor
 #### 安装依赖
 
 ```bash
+brew install usbmuxd
+brew install ios-webkit-debug-proxy
+```
+
+```bash
 npm install macaca-cli -g
 # 检测必须全部通过
 macaca doctor
 npm install app-inspector -g
 ```
 
-```bash
-brew install usbmuxd
-brew install ios-webkit-debug-proxy
-```
-
 获取 Device ID 参考 [ Get the Device ID](https://macacajs.github.io/app-inspector/guide/get-device-id.html#ios)
 
-#### iOS 真机使用
+通过命令 `$ xcrun simctl list` 查看 Device ID
+
+#### 编译 WebDriver
+
+参考 [XCTestWD](https://github.com/macacajs/XCTestWD) 编译 WebDriver
 
 先获取你的 `Team ID` 和 `Bundle Identifier`
 
@@ -59,7 +63,11 @@ brew install ios-webkit-debug-proxy
 * `XCTestWD > XCTestWDUITests > General` 配置 `Team`
 * `XCTestWD > XCTestWDUnitTest > General` 配置 `Team`
 
-编译 `XCTestWDUnitTest`，如果没报错就可以运行 `app-inspector -u DEVICE_ID` 在真机上测试了
+编译 `XCTestWDUnitTest`
+
+#### 查看元素
+
+运行 `app-inspector -u DEVICE_ID`，在浏览器上查看 App 元素
 
 ### appium-desktop
 
