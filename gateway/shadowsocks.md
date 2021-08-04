@@ -53,7 +53,9 @@ sudo apt install shadowsocks-libev
 
 ```
 # Edit the configuration file
+# "server": 127.0.0.1 改为 0.0.0.0 允许非本机访问
 sudo vim /etc/shadowsocks-libev/config.json
+
 
 # Edit the default configuration for debian
 sudo vim /etc/default/shadowsocks-libev
