@@ -84,3 +84,7 @@ react-native bundle --platform ios --entry-file index.ios.js --dev false --bundl
 * [ReactNative iOS源码解析（一） ](http://awhisper.github.io/2016/06/24/ReactNative%E6%B5%81%E7%A8%8B%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/)
 * [ReactNative iOS源码解析（二） ](http://awhisper.github.io/2016/07/02/ReactNative%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%902/)
 * [Talk about ReactNative Image Component ](http://awhisper.github.io/2016/07/17/Talk-about-ReactNative-Image-Component/)
+
+## References
+
+* [The New React Native Architecture Explained](https://formidable.com/blog/2019/react-codegen-part-1/)

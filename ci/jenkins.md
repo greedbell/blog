@@ -8,15 +8,17 @@
 <!-- code_chunk_output -->
 
 - [Jenkins](#jenkins)
-  - [centos 安装](#centos-安装)
+  - [centos 环境](#centos-环境)
     - [yum 方式安装](#yum-方式安装)
       - [Start/Stop](#startstop)
     - [docker 方式安装](#docker-方式安装)
-  - [mac 安装](#mac-安装)
-    - [方法一：](#方法一)
-    - [方法二：](#方法二)
-  - [Mac 环境自启动](#mac-环境自启动)
-  - [启动](#启动)
+  - [mac 环境](#mac-环境)
+    - [安装](#安装)
+      - [方法一：](#方法一)
+      - [方法二：](#方法二)
+    - [Mac 环境自启动](#mac-环境自启动)
+    - [启动](#启动)
+    - [开启局域网访问](#开启局域网访问)
   - [账户](#账户)
     - [开启用户注册](#开启用户注册)
     - [注册用户](#注册用户)
@@ -90,10 +92,10 @@ mac最新版下载 <http://mirrors.jenkins-ci.org/osx-stable/latest>
 
 ```sh
 # 停止 Jenkins 自启动
-$ sudo launchctl unload ～/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
+$ sudo launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.jenkins-lts.plist
 
 # 开启 Jenkins 自启动
-$ sudo launchctl load ～/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
+$ sudo launchctl load ~/Library/LaunchAgents/homebrew.mxcl.jenkins-lts.plist
 ```
 
 ### 启动
@@ -101,9 +103,14 @@ $ sudo launchctl load ～/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
 启动，停止，重启 jenkins | jenkins-lts
 
 ```shell
-brew services start jenkins
-brew services stop jenkins
-brew services restart jenkins
+brew services start jenkins-lts
+brew services stop jenkins-lts
+brew services restart jenkins-lts
+```
+
+指定 plist 文件启动
+```shell
+brew services start jenkins-lts --file=/usr/local/opt/jenkins-lts/homebrew.mxcl.jenkins-lts.plist
 ```
 
 登录 <http://localhost:8080/> 访问`jenkins`.
@@ -111,8 +118,8 @@ brew services restart jenkins
 ### 开启局域网访问
 
 ```
-～/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
-/usr/local/opt/jenkins/homebrew.mxcl.jenkins.plist
+~/Library/LaunchAgents/homebrew.mxcl.jenkins-lts.plist
+/usr/local/opt/jenkins-lts/homebrew.mxcl.jenkins-lts.plist
 ```
 
 httpListenAddress 改为 0.0.0.0
