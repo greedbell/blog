@@ -11,6 +11,8 @@ chmod 600 ~/.ssh/authorized_keys
 
 ## 配置 SSH 不自动关闭
 
+在服务端
+
 打开
 /etc/ssh/sshd_config
 找到

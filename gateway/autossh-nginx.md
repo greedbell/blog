@@ -6,6 +6,7 @@
 
 ## 建立从内网主机到公网主机的 ssh 互信
 
+略
 
 ## 内网主机安装 autossh
 
@@ -13,7 +14,7 @@
 brew install autossh
 ```
 
-## 内网主机将本机的 8080 端口映射到外网主机 7070 端口
+## 内网主机将本机的 8080 端口映射到外网主机 7770 端口
 
 ```sh
 autossh -M 8001 -fCNR 7770:localhost:8080 bell@node.greedlab.com
@@ -65,4 +66,11 @@ server {
 ClientAliveInterval 30
 # 3此客户端没有返回心跳，则会断开连接
 ClientAliveCountMax 3
+```
+
+
+重启 sshd 服务
+
+```bash
+service sshd restart
 ```

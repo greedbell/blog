@@ -23,3 +23,8 @@
 ## M1 上字体变小问题
 
 没找到解决方法
+
+## Android Studio
+
+* 参考 <https://stackoverflow.com/a/65176867>
+* [Android Emulator Apple Silicon Preview](https://androidstudio.googleblog.com/2020/12/android-emulator-apple-silicon-preview.html)

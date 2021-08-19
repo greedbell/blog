@@ -1,12 +1,13 @@
 # shadowsocks
 
-* [GitHub](https://github.com/shadowsocks/shadowsocks/wiki)
-* [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG) shadow socks Mac 客户端
-* [撰写 Adblock Plus 过滤规则](https://adblockplus.org/zh_CN/filters)
+- [GitHub](https://github.com/shadowsocks/shadowsocks/wiki)
+- [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG) shadow socks Mac 客户端
+- [撰写 Adblock Plus 过滤规则](https://adblockplus.org/zh_CN/filters)
 
 ## PHP 安装服务端
 
-### 安装pip
+### 安装 pip
+
 <http://www.centoscn.com/image-text/install/2015/0129/4585.html>
 
 https://pip.pypa.io/en/stable/installing/
@@ -63,6 +64,7 @@ sudo vim /etc/default/shadowsocks-libev
 ```
 
 启动
+
 ```
 # Start the service
 sudo /etc/init.d/shadowsocks-libev start    # for sysvinit, or
@@ -71,8 +73,8 @@ sudo systemctl start shadowsocks-libev      # for systemd
 
 ## mac 终端使用
 
-* [OS X终端使用配置socks5 代理](http://www.jianshu.com/p/16d7275ec736)
-* [用shadowsocks加速git clone](http://www.jianshu.com/p/024e535cbb53)
+- [OS X 终端使用配置 socks5 代理](http://www.jianshu.com/p/16d7275ec736)
+- [用 shadowsocks 加速 git clone](http://www.jianshu.com/p/024e535cbb53)
 
 在 `~/.bash_profile` 中添加
 
@@ -94,3 +96,7 @@ function testproxy() {
     curl -s ip.cn
 }
 ```
+
+## 客户端下载
+
+- <https://shadowsocks.org/en/download/clients.html>

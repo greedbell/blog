@@ -1,5 +1,19 @@
 # 自动打包并发布应用
 
+
+```
+$ xcodebuild --help
+-parallelizeTargets                                      build independent targets in parallel
+-jobs NUMBER                                             specify the maximum number of concurrent build operations
+-maximum-concurrent-test-device-destinations NUMBER      the maximum number of device destinations to test on concurrently
+-maximum-concurrent-test-simulator-destinations NUMBER   the maximum number of simulator destinations to test on concurrently
+-parallel-testing-enabled YES|NO                         overrides the per-target setting in the scheme
+-parallel-testing-worker-count NUMBER                    the exact number of test runners that will be spawned during parallel testing
+-maximum-parallel-testing-workers NUMBER                 the maximum number of test runners that will be spawned during parallel testing
+
+```
+
+
 ## `xcodebuild `打包
 
 ### 各参数使用说明
@@ -62,7 +76,23 @@ $ xcodebuild -list -workspace <NAME>.xcworkspace/
 
 #### ONLY_ACTIVE_ARCH
 
-ONLY_ACTIVE_ARCH=NO
+`ONLY_ACTIVE_ARCH=NO`
+
+#### -showBuildTimingSummary
+
+显示编译时间
+
+#### -parallel-testing-enabled [YES | NO]
+
+是否开启单元测试并行执行
+
+#### -parallelizeTargets
+
+开启并发编译无依赖的目标
+
+#### -jobs NUMBER
+
+并发编译数
 
 ### 构建行为
 

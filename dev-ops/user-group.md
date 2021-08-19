@@ -5,7 +5,7 @@
 ## 创建用户
 
 ```shell
-# useradd -m user
+# useradd -s /bin/bash -m user
 # passwd user
 ```
 
