@@ -75,14 +75,16 @@ fi
 
 ### 构建一个自由风格的软件项目
 
-### Pipeline 流水线|管道
+### Pipeline （流水线|管道）
 
-* `Declarative Pipeline` 相对简单，而且不需要学习groovy语法，对于日常的一般任务完全够用， 
+* [流水线](https://www.jenkins.io/zh/doc/book/pipeline/)
+
+* `Declarative Pipeline` 相对简单，而且不需要学习groovy语法，对于日常的一般任务完全够用，
 * `Scripted Pipeline` 可通过Groovy语言的强大特性做任何你想做的事情。
 
 可以在 Jenkinsfile 中 clone 多个 repo 实现一个任务多仓库功能
 
-### MultiBranch Pipeline
+### MultiBranch Pipeline（多分支流水线）
 
 MultiBranch Pipeline可以理解为是针对某个工程所有分支代码的pipeline集合，jenkins会自动发现源代码中的jenkinsfile配置文件生成对应的分支job。
 而MultiBranch Pipeline要求jenkinsfile配置文件存放在源代码的方式，也是符合Pipeline as Code的理念。虽然这也会给一些没有代码提交权限的devops工程师带来困扰。
@@ -106,11 +108,11 @@ Jenkinsfile 中实现 `git clone` 功能：
 
 ```groovy
  checkout([  
-            $class: 'GitSCM', 
-            branches: [[name: 'refs/heads/master']], 
-            doGenerateSubmoduleConfigurations: false, 
+            $class: 'GitSCM',
+            branches: [[name: 'refs/heads/master']],
+            doGenerateSubmoduleConfigurations: false,
             extensions: [[$class: 'CloneOption', timeout: 120]],
-            submoduleCfg: [], 
+            submoduleCfg: [],
             userRemoteConfigs: [[credentialsId: '6463627-ab54-4e42-bc29-123458', url: 'https://github.com/AtlasBID/CalibrationResults.git']]
 ])
 ```
@@ -119,7 +121,7 @@ Jenkinsfile 中实现 `git clone` 功能：
 
 ```groovy
 git(
-    url: 'git@git.shimo.im:shimo/baboon.git', 
+    url: 'git@git.shimo.im:shimo/baboon.git',
     branch: "$master"
 )
 ```
