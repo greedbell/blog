@@ -2,10 +2,26 @@
 
 * [GitHub](https://github.com/scop/bash-completion)
 
+
 ## 安装
 
+***bash-completion@2 只适用于 bash 4.2 及以上版本***
+
+查看 bash 版本
 ```bash
-brew install bash-completion
+echo $BASH_VERSION
+```
+
+如果版本小于 4.2 安装新版 bash，安装好的 bash 地址 `/usr/local/bin/bash`
+
+```bash
+brew install bash
+```
+
+安装 bash-completion@2
+
+```bash
+brew install bash-completion@2
 ```
 
 `[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"` 写入 `~/.bas_profile`
@@ -19,42 +35,57 @@ source ~/.bas_profile
 查看默认支持的命令
 
 ```bash
-$ ls /usr/local/etc/bash_completion.d/
-abook			bzip2			cvsps
-...
+$ ls /usr/local/Cellar/bash-completion@2/2.11/share/bash-completion/completions
 ```
 
 测试
+
 ```
 sudo f [Tab] [Tab]
 ```
 
 ## 扩展未支持的命令
 
-把对应的脚本拷到 `/usr/local/etc/bash_completion.d` 再重新打开终端
+```bash
+mkdir -p ~/.local/share/bash-completion/completions
+```
+
+把对应的脚本拷到 `~/.local/share/bash-completion/completions`
 
 ### git
 
 ```bash
-curl -L -o /usr/local/etc/bash_completion.d/git https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
+curl -L -o ~/.local/share/bash-completion/completions/git https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
 ```
 
 ### npm
 
 ```bash
-npm completion > /usr/local/etc/bash_completion.d/npm
+npm completion > ~/.local/share/bash-completion/completions/npm
+```
+
+测试
+
+```bash
+npm run [tab] [tab]
 ```
 
 ### npx
 
 ```bash
-curl -L -o /usr/local/etc/bash_completion.d/npx https://gist.githubusercontent.com/gibatronic/44073260ffdcbd122e9520756c8e35a1/raw/b2f9dd613748d56cebd0eb86ee65c0e07024b1ef/complete_npx.sh
+curl -L -o ~/.local/share/bash-completion/completions/npx https://gist.githubusercontent.com/gibatronic/44073260ffdcbd122e9520756c8e35a1/raw/b2f9dd613748d56cebd0eb86ee65c0e07024b1ef/complete_npx.sh
+```
+
+### yarn
+
+```bash
+curl -o ~/.local/share/bash-completion/completions/yarn https://raw.githubusercontent.com/dsifford/yarn-completion/master/yarn-completion.bash
 ```
 
 ### docker
 
 ```bash
-curl -L -o /usr/local/etc/bash_completion.d/docker https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/bash/docker-compose
+curl -L -o ~/.local/share/bash-completion/completions/docker https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/bash/docker-compose
 ```
 
 ## References
