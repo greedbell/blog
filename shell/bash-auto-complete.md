@@ -16,7 +16,7 @@ source ~/.bas_profile
 
 ## 使用
 
-默认支持的命令有
+查看默认支持的命令
 
 ```bash
 $ ls /usr/local/etc/bash_completion.d/
