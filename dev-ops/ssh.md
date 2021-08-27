@@ -38,6 +38,7 @@ service sshd restart
 在 Mac OS X 上，当系统重新启动后，ssh-agent 再次启动时会 “忘记” 这个密钥。不过您可以通过以下命令将您的 SSH 密钥导入到密钥链中：
 
 ```sh
+eval `ssh-agent -s`
 ssh-add -K 您的密钥
 ```
 
