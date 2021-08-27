@@ -31,20 +31,30 @@ sudo f [Tab] [Tab]
 
 ## 扩展未支持的命令
 
+把对应的脚本拷到 `/usr/local/etc/bash_completion.d` 再重新打开终端
+
 ### git
 
 ```bash
-cd /usr/local/etc/bash_completion.d
-curl -L -O https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
-source ~/.bash_profile
+curl -L -o /usr/local/etc/bash_completion.d/git https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
+```
+
+### npm
+
+```bash
+npm completion > /usr/local/etc/bash_completion.d/npm
+```
+
+### npx
+
+```bash
+curl -L -o /usr/local/etc/bash_completion.d/npx https://gist.githubusercontent.com/gibatronic/44073260ffdcbd122e9520756c8e35a1/raw/b2f9dd613748d56cebd0eb86ee65c0e07024b1ef/complete_npx.sh
 ```
 
 ### docker
 
 ```bash
-cd /usr/local/etc/bash_completion.d
-curl -L -O https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/bash/docker-compose
-source ~/.bash_profile
+curl -L -o /usr/local/etc/bash_completion.d/docker https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/bash/docker-compose
 ```
 
 ## References
