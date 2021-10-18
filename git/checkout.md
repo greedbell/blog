@@ -1,4 +1,4 @@
-# checkout
+# git checkout
 
 ## 创建新分支
 

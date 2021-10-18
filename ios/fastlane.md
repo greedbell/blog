@@ -211,6 +211,14 @@ $ brew install imagemagick
 $ pilot upload
 ```
 
+### pem
+
+创建推送证书
+
+```
+fastlane pem --development -p <your password>
+```
+
 ### match git管理描述文件
 
 用 git 管理描述文件

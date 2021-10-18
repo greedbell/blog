@@ -24,10 +24,10 @@ brew install bash
 brew install bash-completion@2
 ```
 
-`[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"` 写入 `~/.bas_profile`
+`[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"` 写入 `~/.bash_profile`
 
 ```bash
-source ~/.bas_profile
+source ~/.bash_profile
 ```
 
 ## 使用
@@ -60,6 +60,8 @@ curl -L -o ~/.local/share/bash-completion/completions/git https://raw.github.com
 
 ### npm
 
+参考 <https://docs.npmjs.com/cli/v7/commands/npm-completion>
+
 ```bash
 npm completion > ~/.local/share/bash-completion/completions/npm
 ```
@@ -77,6 +79,8 @@ curl -L -o ~/.local/share/bash-completion/completions/npx https://gist.githubuse
 ```
 
 ### yarn
+
+参考 <https://github.com/dsifford/yarn-completion>
 
 ```bash
 curl -o ~/.local/share/bash-completion/completions/yarn https://raw.githubusercontent.com/dsifford/yarn-completion/master/yarn-completion.bash

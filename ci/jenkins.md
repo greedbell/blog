@@ -18,7 +18,9 @@
       - [方法二：](#方法二)
     - [Mac 环境自启动](#mac-环境自启动)
     - [启动](#启动)
-    - [开启局域网访问](#开启局域网访问)
+    - [配置 homebrew.mxcl.jenkins-lts.plist](#配置-homebrewmxcljenkins-ltsplist)
+      - [开启局域网访问](#开启局域网访问)
+      - [修复中文乱码](#修复中文乱码)
   - [账户](#账户)
     - [开启用户注册](#开启用户注册)
     - [注册用户](#注册用户)
@@ -115,16 +117,23 @@ brew services start jenkins-lts --file=/usr/local/opt/jenkins-lts/homebrew.mxcl.
 
 登录 <http://localhost:8080/> 访问`jenkins`.
 
-### 开启局域网访问
+### 配置 homebrew.mxcl.jenkins-lts.plist
+
+* 修改 `/usr/local/opt/jenkins-lts/homebrew.mxcl.jenkins-lts.plist`
+* 重启 Jenkins
+* 重启服务后， `/usr/local/opt/jenkins-lts/homebrew.mxcl.jenkins-lts.plist` 会同步到 `~/Library/LaunchAgents/homebrew.mxcl.jenkins-lts.plist`
+
+#### 开启局域网访问
 
 ```
-~/Library/LaunchAgents/homebrew.mxcl.jenkins-lts.plist
-/usr/local/opt/jenkins-lts/homebrew.mxcl.jenkins-lts.plist
+httpListenAddress=0.0.0.0
 ```
 
-httpListenAddress 改为 0.0.0.0
+#### 修复中文乱码
 
-再重启服务
+```
+<string>-Dfile.encoding=UTF8</string>
+```
 
 ## 账户
 
