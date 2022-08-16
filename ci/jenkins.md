@@ -94,10 +94,10 @@ mac最新版下载 <http://mirrors.jenkins-ci.org/osx-stable/latest>
 
 ```sh
 # 停止 Jenkins 自启动
-$ sudo launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.jenkins-lts.plist
+$ launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.jenkins-lts.plist
 
 # 开启 Jenkins 自启动
-$ sudo launchctl load ~/Library/LaunchAgents/homebrew.mxcl.jenkins-lts.plist
+$ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.jenkins-lts.plist
 ```
 
 ### 启动

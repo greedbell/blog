@@ -50,19 +50,39 @@ Web 与 原生交互
 
 * 同步，会阻塞线程
 
-### UIWebView JS 调 OC
+### iOS
+
+#### UIWebView JS 调 OC
 
 * UIWebView JavaScriptCore
 
-### OC 调 UIWebView JS
+#### OC 调 UIWebView JS
 
 * stringByEvaluatingJavaScriptFromString
 
-### WKWebview JS 调 OC
+#### WKWebview JS 调 OC
 
-* `window.webkit.messageHandlers.<name>.postMessage(<messageBody>)`
+原生注册 <name> 方法
 
-### OC 调 WKWebview JS
+```objc
+WKUserContentController *userContentController = [WKUserContentController new];
+[userContentController addScriptMessageHandler:self name:<name>];
+
+WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
+config.userContentController = userContentController;
+
+WKWebView *webView = [[WKWebView alloc] initWithFrame:self.bounds configuration:config];
+```
+
+JS 往 <name> 方法发送数据 <messageBody>
+
+```JS
+window.webkit.messageHandlers.<name>.postMessage(<messageBody>)
+```
+
+<messageBody> 允许的类型 number string date array object null
+
+#### OC 调 WKWebview JS
 
 * `[_webView evaluateJavaScript:source completionHandler:nil];`
 * callWithArguments
@@ -74,8 +94,29 @@ Web 与 原生交互
 参考
 
 * [JS与WebView交互存在的一些问题](http://www.jianshu.com/p/93cea79a2443)
-* [Android WebView调用JS](http://unclechen.github.io/2015/11/26/Android-WebView%E8%B0%83%E7%94%A8JS/)
 * [Android 4.4 中 WebView 使用注意事项](https://github.com/cundong/blog/blob/master/Android%204.4%20%E4%B8%AD%20WebView%20%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.md)
+
+#### WebView JS 调原生
+
+原生注册方法
+
+```java
+webview.addJavascriptInterface(new JSKit(),"__context__");
+
+public class JSKit {
+    // 定义JS需要调用的方法，被JS调用的方法必须加入@JavascriptInterface注解
+    @JavascriptInterface
+    public void hello(String msg) {
+        System.out.println("JS成功调用了Android的hello方法");
+    }
+}
+```
+
+JS 调用原生方法
+
+```JS
+window.__context__.hello('msg');
+```
 
 ### 第三方实现
 

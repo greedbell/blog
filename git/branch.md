@@ -36,3 +36,12 @@ git push -u <remote> <branch>
 ```shell
 git branch -vv
 ```
+
+## 查看分支是否
+
+```shell
+# 查看未合并分支
+git branch --no-merged
+# 查看已合并分支
+git branch --merged
+```

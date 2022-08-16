@@ -1,5 +1,8 @@
 # App 内购（in app purchase）
 
+## 凭证
+
+* [verifyReceipt](https://developer.apple.com/documentation/appstorereceipts/verifyreceipt)
 
 ## App 内购服务通知
 

@@ -9,7 +9,8 @@
 ### brew
 
 ```sh
-brew install ruby
+brew install ruby@2.6
+brew link --overwrite ruby
 ```
 
 ### rvm
@@ -41,5 +42,11 @@ $ rvm list
 安装 ruby
 
 ```shell
-$ rvm install 2.2.5
+$ rvm install 2.6
+```
+
+选择版本
+
+```shell
+$ rvm use 2.6
 ```

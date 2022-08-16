@@ -141,6 +141,27 @@ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 
 容器 mnt 路径为 `/var/lib/docker/devicemapper/mnt/<CONTAINER ID + >`
 
+### 容器自启动
+
+新建容器时带上 `--restart=always`
+
+容器已存在时
+
+```
+docker update --restart=always <container name>
+```
+
+### 查看启动参数
+
+```
+# 安装 pip
+yum install -y python-pip
+# 安装 runlike
+pip install runlike
+# 查看启动参数
+runlike -p <container name>
+```
+
 ## 在容器内使用命令
 
 ```
