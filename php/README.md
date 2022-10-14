@@ -76,7 +76,7 @@ Nowdoc 结构是类似于单引号字符串的,可以用在任意的静态数据
 
 ###  回调
 
-* <http://oomusou.io/php/php-closure/>
+* <https://old-oomusou.goodjack.tw/php/closure/>
 
 #### 匿名函数
 
