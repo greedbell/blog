@@ -2,8 +2,13 @@
 
 同步文件
 
+
 ```sh
+# 本地文件同步到远端
 rsync [OPTION]... [SRC]... [USER@]HOST::DEST
+
+# 远端文件同步到本地
+rsync [OPTION]... [USER@]HOST::DEST [SRC]...
 ```
 
 ## 参数

@@ -105,8 +105,13 @@ $ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.jenkins-lts.plist
 启动，停止，重启 jenkins | jenkins-lts
 
 ```shell
+# 查看当前通过 brew 启动的服务
+brew services
+# 启动 jenkins
 brew services start jenkins-lts
+# 停止 jenkins
 brew services stop jenkins-lts
+# 重启 jenkins
 brew services restart jenkins-lts
 ```
 
