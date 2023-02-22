@@ -18,7 +18,7 @@ module.exports = {
   },
 +  watchFolders: [
 +    path.resolve(__dirname, '../../../node_modules'),
-+    path.resolve(__dirname, '../../../node_modules/@shimo/cougar-apis'),
++    path.resolve(__dirname, '../../../node_modules/@example/share'),
 +  ],
 };
 ```
@@ -99,3 +99,4 @@ TODO
 ## References
 
 - [Setting up React Native Monorepo with Yarn Workspaces](https://www.callstack.com/blog/setting-up-react-native-monorepo-with-yarn-workspaces)
+- [nohoist in Workspaces](https://classic.yarnpkg.com/blog/2018/02/15/nohoist/)
