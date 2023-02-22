@@ -17,16 +17,16 @@ iOS App 运行在 Mac 上有两种方案
 
 ## 如何运行在 Mac 上
 
-* TestFlight 不支持 Mac
-* Mac 上双击 AdHoc 包 可以直接安装
+- TestFlight 支持 `Apple silicon` 架构的 Mac
+- Mac 上双击 AdHoc 包 可以直接安装
 
 ### Xcode 直接在 Mac 上运行 App
 
-只支持 `Mac Catalyst`，普通 iOS App 没法直接运行在 Mac 上
+#### Mac Catalyst
 
-* 在 <developer.apple.com> 添加 Device ID
-* 在 <developer.apple.com> 添加对应的 `macOS App Development` 描述文件
-* 运行的时候选择 Mac 真机
+- 在 <developer.apple.com> 添加 Device ID
+- 在 <developer.apple.com> 添加对应的 `macOS App Development` 描述文件
+- 运行的时候选择 Mac 真机
 
 ## Other
 
@@ -38,5 +38,5 @@ iOS App 运行在 Mac 上有两种方案
 
 ## References
 
-* [Running Your iOS Apps on macOS](https://developer.apple.com/documentation/apple-silicon/running-your-ios-apps-on-macos)
-* [Distributing Your App to Registered Devices](https://developer.apple.com/documentation/xcode/distributing_your_app_to_registered_devices?language=objc)
+- [Running Your iOS Apps on macOS](https://developer.apple.com/documentation/apple-silicon/running-your-ios-apps-on-macos)
+- [Distributing Your App to Registered Devices](https://developer.apple.com/documentation/xcode/distributing_your_app_to_registered_devices?language=objc)

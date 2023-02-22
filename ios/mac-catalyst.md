@@ -1,4 +1,6 @@
-# 支持 macOS
+# 支持 Mac Catalyst
+
+iPad 应用移植到 macOS
 
 ## New Build System
 
@@ -18,7 +20,7 @@ https://developer.apple.com > 找到对应 iOS 的 Bundle ID > Mac Catalyst > Ed
 
 ## XCFrameworks
 
-XCFramework 使将多个平台（包括iOS设备，iOS模拟器和 Mac Catalyst）的二进制框架或库捆绑到一个可分发的 .xcframework 捆绑包中，.framework 和 .a 不支持 Mac Catalyst
+XCFramework 使将多个平台（包括 iOS 设备，iOS 模拟器和 Mac Catalyst）的二进制框架或库捆绑到一个可分发的 .xcframework 捆绑包中，.framework 和 .a 不支持 Mac Catalyst
 
 ## Cocoapods
 
@@ -28,4 +30,4 @@ XCFramework 使将多个平台（包括iOS设备，iOS模拟器和 Mac Catalyst�
 
 ## References
 
-* [Mac Catalyst 初步体验+排坑](https://zhuanlan.zhihu.com/p/88189492)
+- [Mac Catalyst 初步体验+排坑](https://zhuanlan.zhihu.com/p/88189492)
