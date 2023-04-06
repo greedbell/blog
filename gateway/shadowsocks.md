@@ -4,13 +4,11 @@
 - [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG) shadow socks Mac 客户端
 - [撰写 Adblock Plus 过滤规则](https://adblockplus.org/zh_CN/filters)
 
-## PHP 安装服务端
+## PHP 安装服务端（不推荐）
 
 ### 安装 pip
 
-<http://www.centoscn.com/image-text/install/2015/0129/4585.html>
-
-https://pip.pypa.io/en/stable/installing/
+<https://pip.pypa.io/en/stable/installing/>
 
 ### 安装
 
@@ -39,7 +37,9 @@ sudo ssserver -d stop
 sudo ssserver -p 443 -k password -m rc4-md5 --user nobody -d start
 ```
 
-## libev 方式安装服务端
+## libev 方式安装服务端（推荐）
+
+参考 [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev)
 
 Debian & Ubuntu
 
