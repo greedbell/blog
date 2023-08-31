@@ -1,20 +1,19 @@
 # WKWebView 的使用
 
-
 <!-- toc orderedList:0 depthFrom:1 depthTo:6 -->
 
-* [WKWebView 的使用](#wkwebview-的使用)
-  * [WKNavigationDelegate](#wknavigationdelegate)
-  * [WKUIDelegate](#wkuidelegate)
-  * [WKWebViewConfiguration](#wkwebviewconfiguration)
-    * [WKProcessPool](#wkprocesspool)
-    * [WKPreferences](#wkpreferences)
-    * [WKUserContentController](#wkusercontentcontroller)
-      * [WKUserScript](#wkuserscript)
-    * [WKWebsiteDataStore](#wkwebsitedatastore)
-  * [NSURLProtocol](#nsurlprotocol)
-  * [加载进度](#加载进度)
-  * [相关资料](#相关资料)
+- [WKWebView 的使用](#wkwebview-的使用)
+  - [WKNavigationDelegate](#wknavigationdelegate)
+  - [WKUIDelegate](#wkuidelegate)
+  - [WKWebViewConfiguration](#wkwebviewconfiguration)
+    - [WKProcessPool](#wkprocesspool)
+    - [WKPreferences](#wkpreferences)
+    - [WKUserContentController](#wkusercontentcontroller)
+      - [WKUserScript](#wkuserscript)
+    - [WKWebsiteDataStore](#wkwebsitedatastore)
+  - [NSURLProtocol](#nsurlprotocol)
+  - [加载进度](#加载进度)
+  - [相关资料](#相关资料)
 
 <!-- tocstop -->
 
@@ -22,7 +21,7 @@
 
 网页跳转间的导航管理协议，这个协议可以监听网页的活动
 
-* [【iOS开发】WKWebView学习笔记(2)－WKNavigationDelegate](http://www.jianshu.com/p/f9c0ef72b01e)
+- [【iOS 开发】WKWebView 学习笔记(2)－WKNavigationDelegate](http://www.jianshu.com/p/f9c0ef72b01e)
 
 ```objc
 //请求之前，决定是否要跳转:用户点击网页上的链接，需要打开新页面时，将先调用这个方法。
@@ -49,10 +48,10 @@
 
 ## WKUIDelegate
 
-用于交互处理JavaScript中的一些弹出框
+用于交互处理 JavaScript 中的一些弹出框
 
-* [【iOS开发】WKWebView学习笔记(3)－WKUIDelegate](http://www.jianshu.com/p/5f4bba47e323)
-* [WebKit(WKUIDelegate) ](http://blog.csdn.net/y550918116j/article/details/50134853)
+- [【iOS 开发】WKWebView 学习笔记(3)－WKUIDelegate](http://www.jianshu.com/p/5f4bba47e323)
+- [WebKit(WKUIDelegate) ](http://blog.csdn.net/y550918116j/article/details/50134853)
 
 ```
 // 新建WKWebView
@@ -145,7 +144,7 @@ config.preferences = preference;
 
 ### WKUserContentController
 
-主要用来做native与JavaScript的交互管理
+主要用来做 native 与 JavaScript 的交互管理
 
 ```objc
 //设置内容交互控制器 用于处理JavaScript与native交互
@@ -183,7 +182,7 @@ config.userContentController = userController;
 
 ### WKWebsiteDataStore
 
-iOS9以后才能用这个类，是代表webView不同的数据类型，cookies、disk、memory caches、WebSQL、IndexedDB数据库和本地存储。
+iOS9 以后才能用这个类，是代表 webView 不同的数据类型，cookies、disk、memory caches、WebSQL、IndexedDB 数据库和本地存储。
 
 ```
 //设置数据存储store
@@ -234,15 +233,15 @@ WK_EXTERN NSString * const WKWebsiteDataTypeIndexedDBDatabases API_AVAILABLE(mac
 
 只能通过私有方法获取
 
-NSURLProtocol在拦截NSURLSession的POST请求时不能获取到Request中的HTTPBody
+NSURLProtocol 在拦截 NSURLSession 的 POST 请求时不能获取到 Request 中的 HTTPBody
 
 这个方法还是只适合注册自己定义的 scheme，不适合用来拦 http(s) 请求
 
-* [让 WKWebView 支持 NSURLProtocol ](https://blog.yeatse.com/2016/10/26/support-nsurlprotocol-in-wkwebview/)
-* [iOS 开发中使用 NSURLProtocol 拦截 HTTP 请求](http://draveness.me/intercept/)
-* [iOS WKWebView (NSURLProtocol)拦截js、css，图片资源](http://www.jianshu.com/p/4fc13d4d5607)
-* [iOS开发之NSURLProtocol的那些坑](http://www.voidcn.com/blog/xanxus46/article/p-6123061.html)
-* [NSURLProtocol-WebKitSupport](https://github.com/yeatse/NSURLProtocol-WebKitSupport)
+- [让 WKWebView 支持 NSURLProtocol ](https://blog.yeatse.com/2016/10/26/support-nsurlprotocol-in-wkwebview/)
+- [iOS 开发中使用 NSURLProtocol 拦截 HTTP 请求](http://draveness.me/intercept/)
+- [iOS WKWebView (NSURLProtocol)拦截 js、css，图片资源](http://www.jianshu.com/p/4fc13d4d5607)
+- [iOS 开发之 NSURLProtocol 的那些坑](http://www.voidcn.com/blog/xanxus46/article/p-6123061.html)
+- [NSURLProtocol-WebKitSupport](https://github.com/yeatse/NSURLProtocol-WebKitSupport)
 
 ## 加载进度
 
@@ -252,5 +251,5 @@ NSURLProtocol在拦截NSURLSession的POST请求时不能获取到Request中的HT
 
 ## 相关资料
 
-* <http://nshipster.cn/wkwebkit/>
-* <http://www.brighttj.com/ios/ios-wkwebview-new-features-and-use.html>
+- <http://nshipster.cn/wkwebkit/>
+- <http://www.brighttj.com/ios/ios-wkwebview-new-features-and-use.html>
