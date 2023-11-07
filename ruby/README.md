@@ -1,8 +1,8 @@
 # Ruby
 
-* [官网](https://www.ruby-lang.org)
-* [Ruby China](https://ruby-china.org/)
-* [Ruby 教程](http://www.runoob.com/ruby/ruby-tutorial.html)
+- [官网](https://www.ruby-lang.org)
+- [Ruby China](https://ruby-china.org/)
+- [Ruby 教程](http://www.runoob.com/ruby/ruby-tutorial.html)
 
 ## 安装
 
@@ -20,7 +20,13 @@ brew link --overwrite ruby
 安装 rvm
 
 ```shell
-$ curl -L https://get.rvm.io | bash -s stable --autolibs=enabled
+$ curl -sSL https://get.rvm.io | bash -s stable
+```
+
+更新 rvm
+
+```shell
+$ rvm get stable
 ```
 
 把其它方式安装的 ruby 添加到 rvm
@@ -49,4 +55,24 @@ $ rvm install 2.6
 
 ```shell
 $ rvm use 2.6
+```
+
+### arm64
+
+参考 [nickymarino.com](https://nickymarino.com/2021/12/17/install-ruby-273-on-m1/)
+
+```shell
+brew install openssl@1.1
+
+export PATH="$(brew --prefix)/opt/openssl@1.1/bin:$PATH"
+export LDFLAGS="-L$(brew --prefix)/opt/openssl@1.1/lib"
+export CPPFLAGS="-I$(brew --prefix)/opt/openssl@1.1/include"
+export PKG_CONFIG_PATH="$(brew --prefix)/opt/openssl@1.1/lib/pkgconfig"
+
+rvm autolibs disable
+
+export RUBY_CFLAGS=-DUSE_FFI_CLOSURE_ALLOC
+export optflags="-Wno-error=implicit-function-declaration"
+
+rvm install 2.7.6 --with-openssl-dir=$(brew --prefix)/opt/openssl@1.1
 ```
