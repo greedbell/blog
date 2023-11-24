@@ -32,3 +32,9 @@ git clone https://github.com/chrisands/zsh-yarn-completions.git ~/.zsh-yarn-comp
 (echo; echo 'source $HOME/.zsh-yarn-completions/zsh-yarn-completions.plugin.zsh') >> $HOME/.zshrc
 source $HOME/.zshrc
 ```
+
+## 自定义命令自动补全
+
+- [Completion System](https://zsh.sourceforge.io/Doc/Release/Completion-System.html)
+- [如何编写一个 zsh 补全脚本](http://chuquan.me/2020/11/28/how-to-write-a-zsh-completion-script/)
+- [给 zsh 自定义命令添加参数自动补全](https://mazhuang.org/2022/02/12/zsh-completion/)

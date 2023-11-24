@@ -13,16 +13,16 @@ MS-CFB（Microsoft Compound File Binary）微软复合文件二进制的文件�
 
 扇区类型:
 
-| 扇区类型                         | 单个元素长度             | 大小                                                  | 用途                                                                            |
-| -------------------------------- | ------------------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------- |
-| Header                           | 非固定                   | 512 字节（实际有效 76 字节，剩余 436 字节用于 DIFAT） | 包含这个复合文件的初始元数据，由 offset 0 处开始                                |
-| DIFAT                            | 4 字节（共 128 个元素）  | 4109 + 419                                            | 用于 FAT 寻址                                                                   |
-| FAT                              | 4 字节（共 128 个元素 ） | 4 \_ 128 = 512 字节                                   | OLE 中的主要 Allocator，用于 mini FAT、directory、mini stream 等扇区寻址        |
-| Mini FAT                         | 4 字节（共 128 个元素）  | 512 字节                                              | mini stream 用户数据的 Allocator                                                |
-| Directory                        | 128 字节                 | 128 \_ 4 = 512 字节                                   | 包含 storage 对象或 stream 对象的元数据                                         |
-| 用户自定义数据（即 mini stream） | 非固定                   |                                                       | stream 对象的用户自定义数据                                                     |
-| Rang Lock                        | 非固定                   |                                                       | 用于管理对复合文件的并发访问的单个扇区。此扇区 必须包含文件偏移量  0x7FFFFFFF。 |
-| Unallocated Free                 | 非固定                   |                                                       | OLE 的未分配空间                                                                |
+| 扇区类型                                       | 单个元素长度             | 大小                                                  | 用途                                                                            |
+| ---------------------------------------------- | ------------------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Header                                         | 非固定                   | 512 字节（实际有效 76 字节，剩余 436 字节用于 DIFAT） | 包含这个复合文件的初始元数据，由 offset 0 处开始                                |
+| DIFAT（Double-indirect file allocation table） | 4 字节（共 128 个元素）  | 4109 + 419                                            | 用于 FAT 寻址                                                                   |
+| FAT（File Allocation Table）                   | 4 字节（共 128 个元素 ） | 4 \_ 128 = 512 字节                                   | OLE 中的主要 Allocator，用于 mini FAT、directory、mini stream 等扇区寻址        |
+| Mini FAT                                       | 4 字节（共 128 个元素）  | 512 字节                                              | mini stream 用户数据的 Allocator                                                |
+| Directory                                      | 128 字节                 | 128 \_ 4 = 512 字节                                   | 包含 storage 对象或 stream 对象的元数据                                         |
+| 用户自定义数据（即 mini stream）               | 非固定                   |                                                       | stream 对象的用户自定义数据                                                     |
+| Rang Lock                                      | 非固定                   |                                                       | 用于管理对复合文件的并发访问的单个扇区。此扇区 必须包含文件偏移量  0x7FFFFFFF。 |
+| Unallocated Free                               | 非固定                   |                                                       | OLE 的未分配空间                                                                |
 
 扇区名称：
 
@@ -35,6 +35,10 @@ MS-CFB（Microsoft Compound File Binary）微软复合文件二进制的文件�
 | FATSECT        | 0xFFFFFFFD              | Specifies a FAT sector in the FAT.                              |
 | ENDOFCHAIN     | 0xFFFFFFFE              | End of a linked chain of sectors.                               |
 | FREESECT       | 0xFFFFFFFF              | Specifies an unallocated sector in the FAT, Mini FAT, or DIFAT. |
+
+## 分析
+
+- [OffVis](https://www.aldeid.com/wiki/OffVis): Windows 平台 CFB 文件分析工具
 
 ## Reference
 
